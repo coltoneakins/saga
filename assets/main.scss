@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+// Import a Google Font for headings
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+$dark: #363636;
+$light: #F5F5F5;
+
+$family-sans-serif: "Montserrat",  Arial, Helvetica Neue, Helvetica, sans-serif; 
+$primary: #B1CCCC;
+$link: #CCCB80;
+$body-background-color: $light;
+$gap: 64px;
+
+// Set navbar component colors for bulma
+$navbar-background-color: #F5F5F5;
+$navbar-height: 4rem;
+$navbar-item-color: #ababab;
+$navbar-item-hover-color: #B1CCCC;
+$navbar-padding-vertical: 4rem;
+$navbar-padding-horizontal: 4rem;
+
+
+// Import only parts of Bulma
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/grid/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/layout/section.sass";
