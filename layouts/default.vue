@@ -67,12 +67,13 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     height: 100%;
-    //background-color: #F5F5F5;
     background: linear-gradient(to right, skyblue, limegreen, springgreen);
+    line-height: inherit;
 }
 
 .root {
-    padding-top: 130px;
+  padding: 30px;
+  padding-top: 130px;
 }
 
 </style>

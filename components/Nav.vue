@@ -1,157 +1,384 @@
 <template>
   <nav
-    class="navbar is-transparent"
+    class="navi-fixed"
     role="navigation"
     aria-label="main navigation">
+
     <div class="container">
+      <div class="tile is-ancestor navi-tile-ancestor">
+        <div class="tile is-parent is-2">
+          <div class="tile is-child">
+            <nuxt-link to="/">
+              <svg
+                class="home-button"
+                viewBox="0 0 300 150">
 
-      <div class="navbar-brand">
-        <nuxt-link
-          to="/">
+                <defs>
+                  <mask id="home-button__mask">
 
-          <svg
-            class="home-button"
-            width="100%"
-            height="100%"
-            viewBox="0 0 500 300">
 
-            <defs>
-              <mask id="home-button__mask">
+                    <rect
+                      width="500px"
+                      height="300px"
+                      fill="#fff" />
+
+
+
+
+                    <path
+                      d="m95.18 15.103c-14.197 0.0194-27.903 5.3468-38.534 14.859-12.9 11.541-19.965 27.997-19.965 45.039 7e-5 17.042 7.0653 33.497 19.965 45.038 12.961 11.596 30.489 16.976 47.906 14.095h2e-3c3.9073-0.64624 7.6236-1.6678 11.15-2.9873v-0.0427c10.5-3.965 19.311-10.558 26.461-17.763 9.4098-9.4828 16.016-19.876 22.024-29.146 3.9743-6.1331 7.7373-11.833 11.61-16.782 1.9605-2.5583 3.9498-4.9268 6.0038-6.9995h2e-3c5.9976-6.0519 12.941-10.156 19.162-11.185 1.6522-0.27307 3.3937-0.32978 5.1585-0.18723 5.2944 0.4274 10.792 2.64 14.684 6.1216 3.7419 3.3479 6.5665 8.2882 7.8811 13.498h-34.376v12.68h68.678c0.21714-2.0986 0.32745-4.2145 0.32745-6.3396 0-17.042-7.063-33.497-19.963-45.039-12.96-11.596-30.491-16.976-47.908-14.095-5.1251 0.84776-9.9197 2.3443-14.39 4.3093v0.0513c-9.0851 4.0227-16.821 9.9793-23.222 16.43-9.4098 9.4827-16.017 19.878-22.024 29.148-3.9748 6.1339-7.7379 11.833-11.611 16.784-1.9604 2.5573-3.9498 4.9255-6.0033 6.9977-5.9976 6.0519-12.941 10.155-19.162 11.184-6.6088 1.093-14.656-1.2925-19.844-5.9346-5.2495-4.6967-8.6968-12.526-8.6968-19.838-4e-5 -7.3113 3.4473-15.142 8.6968-19.838 3.8913-3.4816 9.3914-5.6943 14.686-6.1217 1.7648-0.14256 3.5063-0.0862 5.1585 0.18722 6.2207 1.0289 13.164 5.133 19.162 11.185 1.1767 1.1874 2.332 2.4726 3.4733 3.8333 1.1348-1.7045 2.2984-3.4822 3.4992-5.3353 4.5003-6.9446 9.5658-14.962 16.291-23.051-9.4531-9.3263-21.741-17.484-36.906-19.992h-2e-3c-2.1771-0.36008-4.3555-0.59077-6.5271-0.69674-0.95007-0.047-1.8984-0.0691-2.8448-0.068zm83.151 70.653c-1.1356 1.7044-2.2981 3.4783-3.5003 5.3334-4.5004 6.9449-9.5659 14.962-16.291 23.051 9.4534 9.3267 21.743 17.484 36.909 19.993 17.418 2.8809 34.948-2.4987 47.909-14.095 7.9748-7.1351 13.715-16.149 16.939-26.018h-38.625c-0.28201 0.28162-0.56894 0.55531-0.86244 0.81785-5.1884 4.642-13.233 7.0276-19.842 5.9345-6.2208-1.029-13.164-5.1325-19.162-11.184h-2e-3c-1.1763-1.1869-2.331-2.472-3.4716-3.8321z"
+                      transform="translate(20, 50), scale(0.8)"/>
+
+
+
+
+
+
+
+
+                  </mask>
+                </defs>
+
+
+
+
+                <!--SVG rectangle to clip-->
+
+
                 <rect
-                  width="100%"
-                  height="100%"
-                  fill="#fff" />
+                  id="home-button__rectangle-background"
+                  class="home-button__background-masked"
+                  x="0"
+                  y="0"
+                  width="400px"
+                  height="250px"
+                  fill="rgba(54, 54, 54, 0.85)"
+                  transform="translate(0,-35)"/>
+
+
+                <!--SVG inner loop for highlight hover effect-->
 
                 <path
-                  d="m183.86 77.739c-17.128 0.02268-33.663 6.4506-46.489 17.927-15.563 13.924-24.086 33.776-24.086 54.336 8e-5 20.56 8.5239 40.412 24.086 54.336 15.636 13.99 36.783 20.48 57.796 17.004h3e-3c4.7139-0.77964 9.1974-2.0121 13.451-3.604v-0.0514c12.668-4.7836 23.297-12.737 31.923-21.43 11.352-11.44 19.323-23.98 26.57-35.163 4.7948-7.3993 9.3346-14.276 14.007-20.247 2.3652-3.0864 4.7652-5.9439 7.2433-8.4444h3e-3c7.2357-7.3012 15.613-12.253 23.118-13.494 1.9932-0.32958 4.0943-0.39768 6.2234-0.22564 6.3874 0.5156 13.02 3.185 17.715 7.3854 4.5144 4.039 7.922 9.9992 9.5081 16.284h-41.473v15.298h82.856c0.26219-2.5318 0.39507-5.0845 0.39507-7.6483 3e-5 -20.56-8.5211-40.412-24.084-54.336-15.636-13.99-36.785-20.48-57.799-17.004-6.1832 1.0228-11.968 2.8283-17.36 5.199v0.06161c-10.961 4.8531-20.293 12.039-28.016 19.822-11.352 11.44-19.324 23.981-26.571 35.165-4.7954 7.4002-9.3354 14.276-14.008 20.249-2.3652 3.0852-4.7651 5.9424-7.2426 8.4423-7.2358 7.3013-15.613 12.252-23.118 13.493-7.9731 1.3186-17.681-1.5593-23.941-7.1597-6.3332-5.6663-10.492-15.113-10.492-23.933-2e-5 -8.8206 4.1589-18.267 10.492-23.934 4.6946-4.2004 11.33-6.8698 17.718-7.3854 2.1291-0.17197 4.2301-0.10394 6.2234 0.22564 7.5049 1.2413 15.882 6.1927 23.118 13.494 1.4196 1.4325 2.8134 2.9831 4.1903 4.6246 1.3691-2.0564 2.7728-4.201 4.2216-6.4367 5.4294-8.3782 11.541-18.051 19.654-27.81-11.405-11.252-26.23-21.093-44.526-24.12h-3e-3c-2.6265-0.43442-5.2547-0.7127-7.8746-0.84057-1.1462-0.05669-2.2902-0.08353-3.4321-0.08239zm100.32 85.239c-1.37 2.0563-2.7725 4.1964-4.2229 6.4345-5.4294 8.3786-11.541 18.05-19.654 27.809 11.405 11.252 26.232 21.094 44.528 24.12 21.013 3.4756 42.163-3.0146 57.799-17.004 9.6212-8.6081 16.547-19.483 20.436-31.389h-46.598c-0.34015 0.33978-0.68638 0.66992-1.0405 0.98664-6.2595 5.6004-15.965 8.4784-23.938 7.1597-7.505-1.2415-15.882-6.192-23.118-13.493h-3e-3c-1.4192-1.432-2.8121-2.9823-4.1883-4.6232z"
-                  fill="#000"/>
-
-              </mask>
-            </defs>
+                  id="home-button__inner-loop"
+                  d="m95.18 15.103c-14.197 0.0194-27.903 5.3468-38.534 14.859-12.9 11.541-19.965 27.997-19.965 45.039 7e-5 17.042 7.0653 33.497 19.965 45.038 12.961 11.596 30.489 16.976 47.906 14.095h2e-3c3.9073-0.64624 7.6236-1.6678 11.15-2.9873v-0.0427c10.5-3.965 19.311-10.558 26.461-17.763 9.4098-9.4828 16.016-19.876 22.024-29.146 3.9743-6.1331 7.7373-11.833 11.61-16.782 1.9605-2.5583 3.9498-4.9268 6.0038-6.9995h2e-3c5.9976-6.0519 12.941-10.156 19.162-11.185 1.6522-0.27307 3.3937-0.32978 5.1585-0.18723 5.2944 0.4274 10.792 2.64 14.684 6.1216 3.7419 3.3479 6.5665 8.2882 7.8811 13.498h-34.376v12.68h68.678c0.21714-2.0986 0.32745-4.2145 0.32745-6.3396 0-17.042-7.063-33.497-19.963-45.039-12.96-11.596-30.491-16.976-47.908-14.095-5.1251 0.84776-9.9197 2.3443-14.39 4.3093v0.0513c-9.0851 4.0227-16.821 9.9793-23.222 16.43-9.4098 9.4827-16.017 19.878-22.024 29.148-3.9748 6.1339-7.7379 11.833-11.611 16.784-1.9604 2.5573-3.9498 4.9255-6.0033 6.9977-5.9976 6.0519-12.941 10.155-19.162 11.184-6.6088 1.093-14.656-1.2925-19.844-5.9346-5.2495-4.6967-8.6968-12.526-8.6968-19.838-4e-5 -7.3113 3.4473-15.142 8.6968-19.838 3.8913-3.4816 9.3914-5.6943 14.686-6.1217 1.7648-0.14256 3.5063-0.0862 5.1585 0.18722 6.2207 1.0289 13.164 5.133 19.162 11.185 1.1767 1.1874 2.332 2.4726 3.4733 3.8333 1.1348-1.7045 2.2984-3.4822 3.4992-5.3353 4.5003-6.9446 9.5658-14.962 16.291-23.051-9.4531-9.3263-21.741-17.484-36.906-19.992h-2e-3c-2.1771-0.36008-4.3555-0.59077-6.5271-0.69674-0.95007-0.047-1.8984-0.0691-2.8448-0.068zm83.151 70.653c-1.1356 1.7044-2.2981 3.4783-3.5003 5.3334-4.5004 6.9449-9.5659 14.962-16.291 23.051 9.4534 9.3267 21.743 17.484 36.909 19.993 17.418 2.8809 34.948-2.4987 47.909-14.095 7.9748-7.1351 13.715-16.149 16.939-26.018h-38.625c-0.28201 0.28162-0.56894 0.55531-0.86244 0.81785-5.1884 4.642-13.233 7.0276-19.842 5.9345-6.2208-1.029-13.164-5.1325-19.162-11.184h-2e-3c-1.1763-1.1869-2.331-2.472-3.4716-3.8321z"
+                  transform="translate(20, 15), scale(0.8)"/>
 
 
+              </svg>
+            </nuxt-link>
+          </div>
+        </div>
+        <div
+          class="tile is-parent is-5 spacer"
+          style="background-color: rgba(54, 54, 54, 0.85)">
+          <div class="tile is-child"/>
+        </div>
+        <div class="tile is-parent is-5">
+          <div class="tile is-child">
+            <nuxt-link to="/">
 
-            <!--SVG rectangle to clip-->
-            <rect
-              id="home-button__rectangle-background"
-              class="home-button__background-masked"
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-              fill="rgba(0, 0, 0, 0.7)"/>
+              <svg class="nav-button">
 
-            <!--SVG inner loop for highlight hover effect-->
-
-            <path
-              id="home-button__inner-loop"
-              d="m183.86 77.739c-17.128 0.02268-33.663 6.4506-46.489 17.927-15.563 13.924-24.086 33.776-24.086 54.336 8e-5 20.56 8.5239 40.412 24.086 54.336 15.636 13.99 36.783 20.48 57.796 17.004h3e-3c4.7139-0.77964 9.1974-2.0121 13.451-3.604v-0.0514c12.668-4.7836 23.297-12.737 31.923-21.43 11.352-11.44 19.323-23.98 26.57-35.163 4.7948-7.3993 9.3346-14.276 14.007-20.247 2.3652-3.0864 4.7652-5.9439 7.2433-8.4444h3e-3c7.2357-7.3012 15.613-12.253 23.118-13.494 1.9932-0.32958 4.0943-0.39768 6.2234-0.22564 6.3874 0.5156 13.02 3.185 17.715 7.3854 4.5144 4.039 7.922 9.9992 9.5081 16.284h-41.473v15.298h82.856c0.26219-2.5318 0.39507-5.0845 0.39507-7.6483 3e-5 -20.56-8.5211-40.412-24.084-54.336-15.636-13.99-36.785-20.48-57.799-17.004-6.1832 1.0228-11.968 2.8283-17.36 5.199v0.06161c-10.961 4.8531-20.293 12.039-28.016 19.822-11.352 11.44-19.324 23.981-26.571 35.165-4.7954 7.4002-9.3354 14.276-14.008 20.249-2.3652 3.0852-4.7651 5.9424-7.2426 8.4423-7.2358 7.3013-15.613 12.252-23.118 13.493-7.9731 1.3186-17.681-1.5593-23.941-7.1597-6.3332-5.6663-10.492-15.113-10.492-23.933-2e-5 -8.8206 4.1589-18.267 10.492-23.934 4.6946-4.2004 11.33-6.8698 17.718-7.3854 2.1291-0.17197 4.2301-0.10394 6.2234 0.22564 7.5049 1.2413 15.882 6.1927 23.118 13.494 1.4196 1.4325 2.8134 2.9831 4.1903 4.6246 1.3691-2.0564 2.7728-4.201 4.2216-6.4367 5.4294-8.3782 11.541-18.051 19.654-27.81-11.405-11.252-26.23-21.093-44.526-24.12h-3e-3c-2.6265-0.43442-5.2547-0.7127-7.8746-0.84057-1.1462-0.05669-2.2902-0.08353-3.4321-0.08239zm100.32 85.239c-1.37 2.0563-2.7725 4.1964-4.2229 6.4345-5.4294 8.3786-11.541 18.05-19.654 27.809 11.405 11.252 26.232 21.094 44.528 24.12 21.013 3.4756 42.163-3.0146 57.799-17.004 9.6212-8.6081 16.547-19.483 20.436-31.389h-46.598c-0.34015 0.33978-0.68638 0.66992-1.0405 0.98664-6.2595 5.6004-15.965 8.4784-23.938 7.1597-7.505-1.2415-15.882-6.192-23.118-13.493h-3e-3c-1.4192-1.432-2.8121-2.9823-4.1883-4.6232z" />
-
-
-          </svg>
-
-
-
-
-        </nuxt-link>
+                <defs>
+                  <mask id="nav-button__mask1">
+                    <rect
+                      width="200"
+                      height="100"
+                      fill="#fff" />
 
 
+                    <text
+                      x="50%"
+                      y="55%"
+                      fill="#000"
+                      text-anchor="middle"
+                    >Home</text>
 
-        <a
-          role="button"
-          class="navbar-burger burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="main-menu">
-          <span aria-hidden="true"/>
-          <span aria-hidden="true"/>
-          <span aria-hidden="true"/>
-        </a>
-      </div>
-      <div
-        id="main-menu"
-        class="navbar-menu">
-        <ul class="navbar-end">
-          <li>
-            <nuxt-link
-              class="navbar-item is-size-5"
-              to="/">Home</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link
-              class="navbar-item is-size-5"
-              to="/portfolio">Portfolio</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link
-              class="navbar-item is-size-5"
-              to="/blog">Blog</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link
-              class="navbar-item is-size-5"
-              to="/contact">Contact</nuxt-link>
-          </li>
-        </ul>
+
+                  </mask>
+                </defs>
+
+
+
+                <!--SVG rectangle to clip-->
+                <rect
+                  id="nav-button__rectangle-background"
+                  class="nav-button__background-masked1"
+                  x="0"
+                  y="0"
+                  width="200"
+                  height="100"
+                  fill="rgba(54, 54, 54, 0.85)"/>
+
+                <text
+                  id="nav-button_highlight-text"
+                  x="50%"
+                  y="55%"
+                  fill="#000"
+                  text-anchor="middle"
+                >Home</text>
+
+              </svg>
+
+            </nuxt-link>
+          </div>
+          <div class="tile is-child">
+            <nuxt-link to="/portfolio">
+
+              <svg class="nav-button">
+
+                <defs>
+                  <mask id="nav-button__mask2">
+                    <rect
+                      width="200"
+                      height="100"
+                      fill="#fff" />
+
+                    <text
+                      x="50%"
+                      y="55%"
+                      fill="#000"
+                      text-anchor="middle"
+                    >Portfolio</text>
+
+
+                  </mask>
+                </defs>
+
+
+
+                <!--SVG rectangle to clip-->
+                <rect
+                  id="nav-button__rectangle-background"
+                  class="nav-button__background-masked2"
+                  x="0"
+                  y="0"
+                  width="200"
+                  height="100"
+                  fill="rgba(54, 54, 54, 0.85)"/>
+
+                <text
+                  id="nav-button_highlight-text"
+                  x="50%"
+                  y="55%"
+                  fill="#000"
+                  text-anchor="middle"
+                >Portfolio</text>
+
+              </svg>
+
+            </nuxt-link>
+          </div>
+          <div class="tile is-child">
+            <nuxt-link to="/blog">
+
+              <svg class="nav-button">
+
+                <defs>
+                  <mask id="nav-button__mask3">
+                    <rect
+                      width="200"
+                      height="100"
+                      fill="#fff" />
+
+                    <text
+                      x="50%"
+                      y="55%"
+                      fill="#000"
+                      text-anchor="middle"
+                    >Blog</text>
+
+
+                  </mask>
+                </defs>
+
+
+
+                <!--SVG rectangle to clip-->
+                <rect
+                  id="nav-button__rectangle-background"
+                  class="nav-button__background-masked3"
+                  x="0"
+                  y="0"
+                  width="200"
+                  height="100"
+                  fill="rgba(54, 54, 54, 0.85)"/>
+
+                <text
+                  id="nav-button_highlight-text"
+                  x="50%"
+                  y="55%"
+                  fill="#000"
+                  text-anchor="middle"
+                >Blog</text>
+
+              </svg>
+
+            </nuxt-link>
+          </div>
+          <div class="tile is-child">
+            <nuxt-link to="/contact">
+              <svg class="nav-button">
+
+                <defs>
+                  <mask id="nav-button__mask4">
+                    <rect
+                      width="200"
+                      height="100"
+                      fill="#fff" />
+
+                    <text
+                      x="50%"
+                      y="55%"
+                      fill="#000"
+                      text-anchor="middle"
+                    >Contact</text>
+
+
+                  </mask>
+                </defs>
+
+
+
+                <!--SVG rectangle to clip-->
+                <rect
+                  id="nav-button__rectangle-background"
+                  class="nav-button__background-masked4"
+                  x="0"
+                  y="0"
+                  width="200"
+                  height="100"
+                  fill="rgba(54, 54, 54, 0.85)"/>
+
+                <text
+                  id="nav-button_highlight-text"
+                  x="50%"
+                  y="55%"
+                  fill="#000"
+                  text-anchor="middle"
+                >Contact</text>
+
+              </svg>
+
+            </nuxt-link>
+          </div>
+        </div>
       </div>
     </div>
-
 
   </nav>
 </template>
 
 
 <style>
-.navbar-brand img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-}
+
+
 .navbar-burger span {
-    height: 2px;
-}
-.navbar-menu ul {
-    align-items: center;
-}
-.navbar-item {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.navbar {
-    position: fixed !important;
-    top: 30px;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    max-width: 90%;
-    //background-color: #363636;
-    //background-color: rgba(0, 0, 0, 0.7);
+  height: 2px;
 }
 
-
-
+.navi-fixed {
+  position: fixed !important;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 90%;
+  background-color: transparent;
+}
 
 .home-button__background-masked {
-    mask: url("#home-button__mask");
+  mask: url("#home-button__mask");
 }
 
 #home-button__inner-loop {
-    fill: transparent;
-    transition: fill 0.25s ease-in-out;
+  fill: transparent;
+  transition: fill 0.25s ease-in-out;
 }
 
 .home-button:hover #home-button__inner-loop {
-    fill: #fff;
-    fill: rgba(255, 255, 255, 0.6);
+  fill: #fff;
 }
 
+.nav-button__background-masked1 {
+  mask: url("#nav-button__mask1");
+}
 
+.nav-button__background-masked2 {
+  mask: url("#nav-button__mask2");
+}
+
+.nav-button__background-masked3 {
+  mask: url("#nav-button__mask3");
+}
+
+.nav-button__background-masked4 {
+  mask: url("#nav-button__mask4");
+}
+
+.nav-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+#nav-button_highlight-text {
+  fill: transparent;
+  transition: fill 0.25s ease-in-out;
+}
+
+.nav-button:hover #nav-button_highlight-text {
+  fill: #fff;
+}
+
+.navbar-item {
+  margin: 0;
+  padding: 0;
+}
+
+.tile.is-parent {
+  padding: 0;
+}
+
+.home-button {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-button {
+  width: 100%;
+  height: 100%;
+}
+
+.navi-fixed .container {
+  min-height: inherit;
+  width: 100%;
+}
+
+.navi-fixed .tile {
+  height: 70px;
+}
+
+.navi-tile-ancestor {
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .spacer {
+    width: 16.66666% !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .spacer {
+    width: 8.33333% !important;
+  }
+}
 
 
 </style>
