@@ -69,11 +69,10 @@
           </div>
         </div>
         <div
-          class="tile is-parent is-5 spacer"
-          style="background-color: rgba(54, 54, 54, 0.85)">
-          <div class="tile is-child"/>
+          class="tile is-parent is-5 spacer">
+          <div class="tile is-child"><p>.</p></div>
         </div>
-        <div class="tile is-parent is-5">
+        <div class="tile is-parent is-5 navi-menu">
           <div class="tile is-child">
             <nuxt-link to="/">
 
@@ -274,111 +273,144 @@
 
 
 .navbar-burger span {
-  height: 2px;
+    height: 2px;
 }
 
 .navi-fixed {
-  position: fixed !important;
-  top: 30px;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  max-width: 90%;
-  background-color: transparent;
+    position: fixed !important;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 90%;
+    background-color: transparent;
 }
 
 .home-button__background-masked {
-  mask: url("#home-button__mask");
+    mask: url("#home-button__mask");
 }
 
 #home-button__inner-loop {
-  fill: transparent;
-  transition: fill 0.25s ease-in-out;
+    fill: transparent;
+    transition: fill 0.25s ease-in-out;
 }
 
 .home-button:hover #home-button__inner-loop {
-  fill: #fff;
+    fill: #fff;
 }
 
 .nav-button__background-masked1 {
-  mask: url("#nav-button__mask1");
+    mask: url("#nav-button__mask1");
 }
 
 .nav-button__background-masked2 {
-  mask: url("#nav-button__mask2");
+    mask: url("#nav-button__mask2");
 }
 
 .nav-button__background-masked3 {
-  mask: url("#nav-button__mask3");
+    mask: url("#nav-button__mask3");
 }
 
 .nav-button__background-masked4 {
-  mask: url("#nav-button__mask4");
+    mask: url("#nav-button__mask4");
 }
 
 .nav-button {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  width: 100%;
-  height: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
 }
 
 #nav-button_highlight-text {
-  fill: transparent;
-  transition: fill 0.25s ease-in-out;
+    fill: transparent;
+    transition: fill 0.25s ease-in-out;
 }
 
 .nav-button:hover #nav-button_highlight-text {
-  fill: #fff;
+    fill: #fff;
 }
 
 .navbar-item {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .tile.is-parent {
-  padding: 0;
+    padding: 0;
 }
 
 .home-button {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-button {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .navi-fixed .container {
-  min-height: inherit;
-  width: 100%;
+    min-height: inherit;
+    width: 100%;
 }
 
 .navi-fixed .tile {
-  height: 70px;
+    height: 70px;
 }
 
 .navi-tile-ancestor {
-  justify-content: center;
+    justify-content: center;
 }
 
+.spacer {
+    background-color: #363636;
+    background-color: rgba(54, 54, 54, 0.85);
+}
+
+
 @media screen and (max-width: 1024px) {
-  .spacer {
-    width: 16.66666% !important;
-  }
+    .spacer {
+        width: 16.66666% !important;
+    }
 }
 
 @media screen and (max-width: 960px) {
-  .spacer {
-    width: 8.33333% !important;
-  }
+    .spacer {
+        width: 8.33333% !important;
+    }
 }
+
+/*
+IE-specific CSS Hacks
+https://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11
+*/
+
+/*
+Edge (which is moving to Chromium soon anyway...)
+https://stackoverflow.com/questions/32201586/how-to-identify-microsoft-edge-browser-via-css
+https://browserstrangeness.github.io/css_hacks.html
+*/
+@supports (-ms-ime-align:auto) {
+    .navi-menu .tile {
+        margin-left: -0.5px !important;
+        margin-right: -0.5px !important;
+    }
+}
+
+/*
+IE11
+*/
+_:-ms-fullscreen, :root .navi-menu .tile {
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+
 
 
 </style>
