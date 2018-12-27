@@ -460,7 +460,6 @@
 }
 
 .navigation__ie-backup-nav {
-    display: block;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -502,7 +501,6 @@ https://browserstrangeness.github.io/css_hacks.html
         margin-right: -0.5px !important;
     }
 }
-
 
 /*
 Firefox Only

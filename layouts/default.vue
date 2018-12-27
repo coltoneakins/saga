@@ -2,8 +2,17 @@
   <div
     class="root">
 
-    <div id="menu">
-      test
+    <div
+      id="menu"
+      class="mobile-menu">
+      <aside class="menu">
+        <ul class="menu-list">
+          <li><nuxt-link to="/">Home</nuxt-link></li>
+          <li><nuxt-link to="/portfolio">Portfolio</nuxt-link></li>
+          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+        </ul>
+      </aside>
     </div>
 
     <a
@@ -158,7 +167,7 @@ END: Slideout CSS Styles
 #panel {
     padding: 30px;
     padding-top: 130px;
-    background-color: #fff;
+    background-color: #F5F5F5;
 }
 
 .navbar-burger {
@@ -171,10 +180,23 @@ END: Slideout CSS Styles
 }
 
 @media screen and (min-width: 775px) {
-.navbar-burger {
-    display: none;
-}
+    .navbar-burger {
+        display: none;
+    }
 }
 
+.mobile-menu {
+    background-color: #E4E4E4;
+}
+
+.mobile-menu .menu-list a {
+    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.mobile-menu .menu-list .nuxt-link-exact-active {
+    background-color: #B1CCCC;
+}
 
 </style>
