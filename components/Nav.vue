@@ -1,14 +1,16 @@
 <template>
   <nav
-    class="navi-fixed"
+    class="navi-fixed navigation"
     role="navigation"
     aria-label="main navigation">
 
-    <div class="container">
+    <div class="container navigation__primary">
       <div class="tile is-ancestor navi-tile-ancestor">
         <div class="tile is-parent is-2">
           <div class="tile is-child">
-            <nuxt-link to="/">
+            <nuxt-link
+              class="navigation__logo-primary"
+              to="/">
               <svg
                 class="home-button"
                 viewBox="0 0 300 150">
@@ -66,13 +68,20 @@
 
               </svg>
             </nuxt-link>
+            <div class="navigation__logo-mobile">
+              <nuxt-link to="/">
+                <img
+                  alt="Colton Eakins logo of initials"
+                  src="~/assets/logo.png">
+              </nuxt-link>
+            </div>
           </div>
         </div>
         <div
           class="tile is-parent is-5 spacer">
           <div class="tile is-child"><p>.</p></div>
         </div>
-        <div class="tile is-parent is-5 navi-menu">
+        <div class="tile is-parent is-5 navi-menu navigation__menu">
           <div class="tile is-child">
             <nuxt-link to="/">
 
@@ -265,6 +274,36 @@
       </div>
     </div>
 
+    <div class="navbar-menu navigation__ie-backup-nav">
+      <div class="navbar-start">
+        <div class="navbar-brand">
+          <div class="navbar-item">
+            <div class="navigation__ie-logo">
+              <nuxt-link to="/">
+                <img
+                  alt="Colton Eakins logo of initials"
+                  src="~/assets/logo.png">
+              </nuxt-link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <nuxt-link
+          class="navbar-item"
+          to="/">Home</nuxt-link>
+        <nuxt-link
+          class="navbar-item"
+          to="/portfolio">Portfolio</nuxt-link>
+        <nuxt-link
+          class="navbar-item"
+          to="/blog">Blog</nuxt-link>
+        <nuxt-link
+          class="navbar-item"
+          to="/contact">Contact</nuxt-link>
+      </div>
+    </div>
+
   </nav>
 </template>
 
@@ -372,7 +411,6 @@
     background-color: rgba(54, 54, 54, 0.85);
 }
 
-
 @media screen and (max-width: 1024px) {
     .spacer {
         width: 16.66666% !important;
@@ -385,8 +423,50 @@
     }
 }
 
+@media screen and (max-width: 775px) {
+  .navi-menu, .spacer {
+    display: none;
+  }
+}
+
+.navigation__ie-backup-nav {
+  display: none;
+}
+
+.navigation__logo-mobile {
+  max-width: 175px;
+}
+
+@media screen and (min-width: 776px) {
+  .navigation__logo-mobile {
+     display: none;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .navigation__logo-primary {
+    display: none;
+  }
+  .navi-fixed {
+    position: relative !important;
+    top: 0;
+  }
+  #panel {
+     padding: 15px !important;
+  }
+  .navi-fixed .tile {
+    height: inherit;
+  }
+}
+
+.navigation__ie-backup-menu {
+  background-color: red;
+}
+
+
+
 /*
-IE-specific CSS Hacks
+Browser Specific CSS Hacks
 https://stackoverflow.com/questions/20541306/how-to-write-a-css-hack-for-ie-11
 */
 
@@ -410,7 +490,30 @@ _:-ms-fullscreen, :root .navi-menu .tile {
     margin-right: -1px;
 }
 
+/*
+Firefox Only
+*/
+@supports (-moz-appearance:none) {
+  @media screen and (max-width: 1088px) {
+    .navi-menu .tile {
+      margin-left: -0.5px !important;
+      margin-right: -0.5px !important;
+    }
+  }
+}
 
+/*
+IE Backup Menu CSS
+IE 9-11
+*/
+@media screen and (min-width:0\0) and (min-resolution:+72dpi) {
+  .navigation__ie-backup-nav {
+    display: block;
+  }
+  .navigation__primary {
+    display: none !important;
+  }
+}
 
 
 </style>

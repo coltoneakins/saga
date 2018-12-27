@@ -1,26 +1,62 @@
 <template>
-  <div class="root">
-    <header>
-      <Nav/>
-    </header>
+  <div
+    class="root">
 
-    <main>
-      <nuxt/>
-    </main>
+    <div id="menu">
+      test
+    </div>
 
-    <footer>
-      <h3>Footer coming soon!</h3>
-    </footer>
+    <a
+      role="button"
+      class="navbar-burger toggle-button"
+      data-target="navMenu"
+      aria-label="menu"
+      aria-expanded="false">
+      <span aria-hidden="true"/>
+      <span aria-hidden="true"/>
+      <span aria-hidden="true"/>
+    </a>
+
+    <div id="panel">
+      <header>
+        <Nav/>
+      </header>
+
+      <main>
+        <nuxt/>
+      </main>
+
+      <footer>
+        <h3>Footer coming soon!</h3>
+      </footer>
+    </div>
+
   </div>
 </template>
 
 <script>
 import Nav from '~/components/Nav.vue'
+import Slideout from 'slideout'
 
 export default {
-  components: {
-    Nav
-  }
+    components: {
+        Nav
+    },
+    mounted: function () {
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70,
+            'easing': 'ease-in-out',
+            'side': 'right'
+        });
+
+        // Toggle button
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+      slideout.toggle();
+      });
+    }
 }
 </script>
 
@@ -28,7 +64,7 @@ export default {
 <style lang="scss">
 html {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+                 Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
@@ -71,9 +107,74 @@ body {
     line-height: inherit;
 }
 
-.root {
-  padding: 30px;
-  padding-top: 130px;
+
+/*
+BEGIN: Slideout CSS Styles
+*/
+
+.slideout-menu {
+    position: fixed;
+    top: 15px;
+    bottom: 0;
+    right: 15px;
+    width: 256px;
+    min-height: 100vh;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 0;
+    display: none;
 }
+
+.slideout-menu-left {
+    left: 15px;
+}
+
+.slideout-menu-right {
+    right: 15px;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    /*background-color: #FFF; /* A background-color is required */
+    min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+/*
+END: Slideout CSS Styles
+*/
+
+
+#panel {
+    padding: 30px;
+    padding-top: 130px;
+    background-color: #fff;
+}
+
+.navbar-burger {
+    position: fixed;
+    z-index: 5;
+    right: 15px;
+    color: #363636;
+    background-color: #ABABAB;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+@media screen and (min-width: 775px) {
+.navbar-burger {
+    display: none;
+}
+}
+
 
 </style>
