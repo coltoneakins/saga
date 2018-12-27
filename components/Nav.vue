@@ -424,45 +424,66 @@
 }
 
 @media screen and (max-width: 775px) {
-  .navi-menu, .spacer {
-    display: none;
-  }
+    .navi-menu, .spacer {
+        display: none;
+    }
 }
 
 .navigation__ie-backup-nav {
-  display: none;
+    display: none;
 }
 
 .navigation__logo-mobile {
-  max-width: 175px;
+    max-width: 175px;
 }
 
 @media screen and (min-width: 776px) {
-  .navigation__logo-mobile {
-     display: none;
-  }
+    .navigation__logo-mobile {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 776px) {
-  .navigation__logo-primary {
-    display: none;
-  }
-  .navi-fixed {
-    position: relative !important;
-    top: 0;
-  }
-  #panel {
-     padding: 15px !important;
-  }
-  .navi-fixed .tile {
-    height: inherit;
-  }
+    .navigation__logo-primary {
+        display: none;
+    }
+    .navi-fixed {
+        position: relative !important;
+        top: 0;
+    }
+    #panel {
+        padding: 15px !important;
+    }
+    .navi-fixed .tile {
+        height: inherit;
+    }
 }
 
-.navigation__ie-backup-menu {
-  background-color: red;
+.navigation__ie-backup-nav {
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
+.navigation__ie-logo img {
+    width: 200px;
+    height: auto;
+    max-height: inherit;
+}
+
+.navigation__ie-backup-nav .navbar-item {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navigation__ie-backup-nav .navbar-start {
+    justify-content: center;
+}
+
+.navigation__ie-backup-nav .navbar-end {
+    justify-content: center;
+}
 
 
 /*
@@ -482,13 +503,6 @@ https://browserstrangeness.github.io/css_hacks.html
     }
 }
 
-/*
-IE11
-*/
-_:-ms-fullscreen, :root .navi-menu .tile {
-    margin-left: -1px;
-    margin-right: -1px;
-}
 
 /*
 Firefox Only
@@ -512,6 +526,13 @@ IE 9-11
   }
   .navigation__primary {
     display: none !important;
+  }
+  .navi-fixed {
+      position: relative !important;
+      top: inherit;
+  }
+  #panel {
+      padding: 10px !important;
   }
 }
 
