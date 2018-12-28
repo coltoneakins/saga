@@ -5,10 +5,8 @@
 </template>
 
 <script>
-
 export default {
-  components: {
-  }
+    scrollToTop: true
 }
 </script>
 

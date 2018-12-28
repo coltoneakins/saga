@@ -111,11 +111,13 @@ export default {
     top: 25vh;
     width: 75px;
     max-height: 80vh;
+    z-index: 5;
 }
 .social-media .tile {
     margin: 0 !important;
     width: 75px;
     height: 75px;
+    min-height: 75px; /*For issues with IE flexbox*/
 }
 .tile.is-vertical > .tile.is-child {
     margin-bottom: 0 !important;

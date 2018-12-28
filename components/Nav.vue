@@ -9,6 +9,7 @@
         <div class="tile is-parent is-2">
           <div class="tile is-child">
             <nuxt-link
+              title="Colton Eakins"
               class="navigation__logo-primary"
               to="/">
               <svg
@@ -315,7 +316,9 @@
         <div class="navbar-brand">
           <div class="navbar-item">
             <div class="navigation__ie-logo">
-              <nuxt-link to="/">
+              <nuxt-link
+                title="Colton Eakins"
+                to="/">
                 <img
                   alt="Colton Eakins logo of initials"
                   src="~/assets/logo.png">
@@ -519,6 +522,18 @@
 .navigation__ie-backup-nav .navbar-end {
     justify-content: center;
 }
+
+.navigation__ie-backup-nav {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 775px) {
+    .navigation__ie-backup-nav .navbar-end {
+        display: none;
+    }
+}
+
 
 
 /*

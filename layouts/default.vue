@@ -7,10 +7,18 @@
       class="mobile-menu">
       <aside class="menu">
         <ul class="menu-list">
-          <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><nuxt-link to="/portfolio">Portfolio</nuxt-link></li>
-          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
-          <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+          <li><nuxt-link
+            class="mobile-menu__item"
+            to="/">Home</nuxt-link></li>
+          <li><nuxt-link
+            class="mobile-menu__item"
+            to="/portfolio">Portfolio</nuxt-link></li>
+          <li><nuxt-link
+            class="mobile-menu__item"
+            to="/blog">Blog</nuxt-link></li>
+          <li><nuxt-link
+            class="mobile-menu__item"
+            to="/contact">Contact</nuxt-link></li>
         </ul>
       </aside>
     </div>
@@ -55,19 +63,34 @@ export default {
         SocialMedia
     },
     mounted: function () {
-        var slideout = new Slideout({
-            'panel': document.getElementById('panel'),
-            'menu': document.getElementById('menu'),
-            'padding': 256,
-            'tolerance': 70,
-            'easing': 'ease-in-out',
-            'side': 'right'
-        });
+      this.$nextTick(function(){
+           // Initialize slideout.js to set up the mobile site menu
+            var slideout = new Slideout({
+                'panel': document.getElementById('panel'),
+                'menu': document.getElementById('menu'),
+                'padding': 256,
+                'tolerance': 70,
+                'easing': 'ease-in-out',
+                'side': 'right'
+            });
 
-        // Toggle button
-        document.querySelector('.toggle-button').addEventListener('click', function() {
-      slideout.toggle();
-      });
+            // Toggle button
+            document.querySelector('.toggle-button').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // Attach an event listener to all mobile menu buttons so that the menu is closed
+            // on page change. This is a SPA--so there is no hard refresh.
+            if (document.querySelector('.mobile-menu') !== null) {
+                var mobileButtons = document.querySelectorAll('.mobile-menu__item');
+                for (var i=0; i<mobileButtons.length; i++){
+                    mobileButtons[i].addEventListener('click', function(){
+                        slideout.close();
+                    });
+                }
+            }
+
+        })
     }
 }
 </script>
