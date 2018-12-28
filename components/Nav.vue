@@ -548,8 +548,8 @@ https://browserstrangeness.github.io/css_hacks.html
 */
 @supports (-ms-ime-align:auto) {
     .navi-menu .tile {
-        margin-left: -0.5px !important;
-        margin-right: -0.5px !important;
+        margin-left: -0.25px !important;
+        margin-right: -0.25px !important;
     }
 }
 
@@ -557,11 +557,13 @@ https://browserstrangeness.github.io/css_hacks.html
 Firefox Only
 */
 @supports (-moz-appearance:none) {
-  @media screen and (max-width: 1088px) {
-    .navi-menu .tile {
-      margin-left: -0.5px !important;
-      margin-right: -0.5px !important;
-    }
+  .spacer {
+      margin-left: -0.25px;
+      margin-right: -0.25px;
+  }
+  .navi-menu .tile {
+    margin-left: -0.25px !important;
+    margin-right: -0.25px !important;
   }
 }
 

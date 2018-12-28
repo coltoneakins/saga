@@ -135,4 +135,29 @@ export default {
 .social-media svg:hover {
     opacity: 0.5;
 }
+@media screen and (max-width: 768px) {
+    .social-media .tile {
+        display: inline;
+        width: 40px;
+        height: 40px;
+        min-height: inherit;
+        padding-left: 10px;
+    }
+
+    .social-media > svg{
+       display: none;
+    }
+    .social-media svg {
+        width: 40px;
+    }
+
+    .social-media {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        top: inherit;
+        text-align: center;
+    }
+}
 </style>
