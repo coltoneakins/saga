@@ -39,10 +39,11 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [,
+  modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     //'@nuxtjs/bulma'
-	  // Instead, Bulma is compiled in from main.scss above in the Global CSS section
+    // Instead, Bulma is compiled in from main.scss above in the Global CSS section
+   'nuxt-svg'
   ],
 
   /*

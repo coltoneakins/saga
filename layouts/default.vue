@@ -33,6 +33,7 @@
 
       <main>
         <nuxt/>
+        <SocialMedia/>
       </main>
 
       <footer>
@@ -45,11 +46,13 @@
 
 <script>
 import Nav from '~/components/Nav.vue'
+import SocialMedia from '~/components/SocialMedia.vue'
 import Slideout from 'slideout'
 
 export default {
     components: {
-        Nav
+        Nav,
+        SocialMedia
     },
     mounted: function () {
         var slideout = new Slideout({
@@ -70,7 +73,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style>
 html {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
                  Roboto, 'Helvetica Neue', Arial, sans-serif;

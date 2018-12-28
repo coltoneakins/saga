@@ -12,6 +12,11 @@
               class="navigation__logo-primary"
               to="/">
               <svg
+                version="1.1"
+                baseProfile="full"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:ev="http://www.w3.org/2001/xml-events"
                 class="home-button"
                 viewBox="0 0 300 150">
 
@@ -85,7 +90,14 @@
           <div class="tile is-child">
             <nuxt-link to="/">
 
-              <svg class="nav-button">
+              <svg
+                version="1.1"
+                baseProfile="full"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:ev="http://www.w3.org/2001/xml-events"
+
+                class="nav-button">
 
                 <defs>
                   <mask id="nav-button__mask1">
@@ -133,7 +145,15 @@
           <div class="tile is-child">
             <nuxt-link to="/portfolio">
 
-              <svg class="nav-button">
+              <svg
+
+                version="1.1"
+                baseProfile="full"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:ev="http://www.w3.org/2001/xml-events"
+
+                class="nav-button">
 
                 <defs>
                   <mask id="nav-button__mask2">
@@ -180,7 +200,15 @@
           <div class="tile is-child">
             <nuxt-link to="/blog">
 
-              <svg class="nav-button">
+              <svg
+
+                version="1.1"
+                baseProfile="full"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:ev="http://www.w3.org/2001/xml-events"
+
+                class="nav-button">
 
                 <defs>
                   <mask id="nav-button__mask3">
@@ -226,7 +254,15 @@
           </div>
           <div class="tile is-child">
             <nuxt-link to="/contact">
-              <svg class="nav-button">
+              <svg
+
+                version="1.1"
+                baseProfile="full"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:ev="http://www.w3.org/2001/xml-events"
+
+                class="nav-button">
 
                 <defs>
                   <mask id="nav-button__mask4">
