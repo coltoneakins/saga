@@ -4,6 +4,14 @@
 
 <script>
 export default {
-    scrollToTop: true
+    scrollToTop: true,
+    head () {
+        return {
+            title: 'Colton Eakins // Modern Front-End Developer // Contact',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Contact Colton Eakins for web development.' }
+        ]
+      }
+    }
 }
 </script>

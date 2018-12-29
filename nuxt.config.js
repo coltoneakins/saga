@@ -11,7 +11,7 @@ module.exports = {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: pkg.description},
+      {hid: 'description', name: 'description', content: 'Colton Eakins. Interactive front-end developer. Colton writes blog posts that dive deep into web development.'},
       {name: 'msapplication-TileColor', content: '#000000'},
       {name: 'theme-color', content: '#ffffff'},
       {name: 'msapplication-TileImage', content: '/favicon-144.png'},
@@ -68,8 +68,23 @@ module.exports = {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     //'@nuxtjs/bulma'
     // Instead, Bulma is compiled in from main.scss above in the Global CSS section
-   'nuxt-svg'
+   'nuxt-svg',
+   '@nuxtjs/sitemap'
   ],
+
+  /*
+  ** Sitemap Options
+  */
+  sitemap: {
+	      path: '/sitemap.xml',
+	      generate: true,
+	      routes: [
+	          '/',
+	          '/portfolio',
+	          '/blog',
+	          '/contact',
+	      ]
+   },
 
   /*
   ** Build configuration

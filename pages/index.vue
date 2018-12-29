@@ -6,7 +6,15 @@
 
 <script>
 export default {
-    scrollToTop: true
+  scrollToTop: true,
+  head () {
+    return {
+      title: 'Colton Eakins // Modern Front-End Developer // Home',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Colton Eakins. Interactive front-end developer. Colton writes blog posts the dive deep into web development.' }
+      ]
+    }
+  }
 }
 </script>
 
