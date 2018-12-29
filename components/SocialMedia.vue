@@ -109,15 +109,15 @@ export default {
     position: absolute;
     right: 15px;
     top: 25vh;
-    width: 75px;
+    width: 60px;
     max-height: 80vh;
     z-index: 5;
 }
 .social-media .tile {
     margin: 0 !important;
-    width: 75px;
-    height: 75px;
-    min-height: 75px; /*For issues with IE flexbox*/
+    width: 60px;
+    height: 60px;
+    min-height: 60px; /*For issues with IE flexbox*/
 }
 .tile.is-vertical > .tile.is-child {
     margin-bottom: 0 !important;
@@ -126,8 +126,8 @@ export default {
     margin-bottom: 0 !important;
 }
 .social-media svg {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     fill: #363636;
     fill: rgba(54, 54, 54, 0.85);
     transition: opacity 0.25s ease-in-out;

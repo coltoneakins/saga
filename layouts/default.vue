@@ -45,7 +45,7 @@
       </main>
 
       <footer>
-        <h3>Footer coming soon!</h3>
+        <Footer/>
       </footer>
     </div>
 
@@ -55,12 +55,14 @@
 <script>
 import Nav from '~/components/Nav.vue'
 import SocialMedia from '~/components/SocialMedia.vue'
+import Footer from '~/components/Footer.vue'
 import Slideout from 'slideout'
 
 export default {
     components: {
-        Nav,
-        SocialMedia
+      Nav,
+      SocialMedia,
+      Footer
     },
     mounted: function () {
       this.$nextTick(function(){
