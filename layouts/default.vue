@@ -227,4 +227,34 @@ END: Slideout CSS Styles
     background-color: #B1CCCC;
 }
 
+/*
+Transition Between Routes: Slide
+*/
+
+.slide-enter-active {
+    animation: slideLeftIn 0.65s ease-out both;
+}
+
+.slide-leave-active {
+    animation: slideLeftOut 0.65s ease-in both;
+}
+
+@keyframes slideLeftIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeftOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+  }
+}
+
 </style>

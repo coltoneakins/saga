@@ -12,6 +12,7 @@ export default {
                 { hid: 'description', name: 'description', content: 'Colton writes blog posts that dive deep into web development.' }
         ]
       }
-    }
+    },
+    transition: 'slide'
 }
 </script>

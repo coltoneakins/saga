@@ -39,7 +39,11 @@
     width: 50px;
 }
 .footer-bar__social-media-wrapper .level-item a {
-    color: #F5F5F5;
+    color: #ABABAB;
+    transition: color 0.25s ease-in-out;
+}
+.footer-bar__social-media-wrapper .level-item a:hover {
+    color: #fff;
 }
 .footer-bar__social-media-wrapper {
     max-width: 600px;

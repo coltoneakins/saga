@@ -15,9 +15,27 @@ module.exports = {
       {name: 'msapplication-TileColor', content: '#000000'},
       {name: 'theme-color', content: '#ffffff'},
       {name: 'msapplication-TileImage', content: '/favicon-144.png'},
-      {name: 'msapplication-config', content: '/browserconfig.xml'}
+      {name: 'msapplication-config', content: '/browserconfig.xml'},
+      // Open Graph meta tags
+      // Facebook sharing meta tags
+      {property: 'og:image:width', content: '279'},
+      {property: 'og:image:height', content: '279'},
+      {property: 'og:description', content: 'Colton Eakins is a front-end developer who uses modern web development techniques.'},
+      {property: 'og:title', content: 'Colton Eakins, Front-End Developer'},
+      {property: 'og:url', content: 'https://www.coltoneakins.com/'},
+      {property: 'og:image', content: 'https://www.coltoneakins.com/og-image.jpg'},
+      // Twitter sharing meta tags
+      // Requires @username; TODO: Create Twitter account.
+      // LinkedIn sharing meta tags
+      {property: 'og:title', content: 'Colton Eakins, Front-End Developer'},
+      {property: 'og:image', content: 'https://www.coltoneakins.com/og-image-linkedin.jpg'},
+      {property: 'og:description', content: 'Colton Eakins is a front-end developer who uses modern web development techniques.'},
+      {property: 'og:url', content: 'https://www.coltoneakins.com/'},
+      // Google Search Console site verification meta tag
+      {name: 'google-site-verification', content: 'F5GKzEWKqHvKwwjuvH7o4UFW6Knwea0Grba-1Gks4Lg'}
     ],
     link: [
+      // Favicon meta tags
       {rel: 'icon', sizes: '16x16 32x32 64x64', href: '/favicon.ico'},
       {rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png'},
       {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'},
@@ -69,7 +87,10 @@ module.exports = {
     //'@nuxtjs/bulma'
     // Instead, Bulma is compiled in from main.scss above in the Global CSS section
    'nuxt-svg',
-   '@nuxtjs/sitemap'
+   '@nuxtjs/sitemap',
+   ['@nuxtjs/google-analytics', {
+     id: 'UA-131672294-1'
+   }]
   ],
 
   /*

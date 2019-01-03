@@ -14,12 +14,14 @@ export default {
         { hid: 'description', name: 'description', content: 'Colton Eakins. Interactive front-end developer. Colton writes blog posts the dive deep into web development.' }
       ]
     }
+  },
+  transition: {
+    name: 'slide'
   }
 }
 </script>
 
 <style>
-
 .container {
   min-height: 100vh;
   display: flex;
