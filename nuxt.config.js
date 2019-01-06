@@ -93,6 +93,7 @@ module.exports = {
    }]
   ],
 
+
   /*
   ** Sitemap Options
   */

@@ -1,9 +1,14 @@
 <template>
-  <h2>Future home of my blog. Coming soon!</h2>
+  <Blog/>
 </template>
 
 <script>
+import Blog from '~/components/Blog.vue'
+
 export default {
+    components: {
+      Blog
+    },
     scrollToTop: true,
     head () {
         return {
@@ -13,6 +18,6 @@ export default {
         ]
       }
     },
-    transition: 'slide'
+    transition: 'fade'
 }
 </script>

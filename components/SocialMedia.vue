@@ -106,17 +106,18 @@ export default {
 
 <style>
 .social-media {
-    position: absolute;
+    position: fixed;
     right: 15px;
-    top: 25vh;
+    top: 50%;
+    transform: translateY(-50%);
     width: 60px;
-    max-height: 80vh;
     z-index: 5;
+}
+.social-media > svg {
+    display: none;
 }
 .social-media .tile {
     margin: 0 !important;
-    width: 60px;
-    height: 60px;
     min-height: 60px; /*For issues with IE flexbox*/
 }
 .tile.is-vertical > .tile.is-child {

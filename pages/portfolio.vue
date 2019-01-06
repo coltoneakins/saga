@@ -27,6 +27,6 @@ export default {
             ]
         }
     },
-    transition: 'slide'
+    transition: 'fade'
 }
 </script>

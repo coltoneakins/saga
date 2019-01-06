@@ -139,7 +139,6 @@ body {
     border-right: 15px solid #363636;
     padding-top: 15px;
     padding-bottom: 15px;
-    height: 100%;
     background: linear-gradient(to right, skyblue, limegreen, springgreen);
     line-height: inherit;
 }
@@ -173,8 +172,10 @@ BEGIN: Slideout CSS Styles
 .slideout-panel {
     position: relative;
     z-index: 1;
-    will-change: transform;
-    /*background-color: #FFF; /* A background-color is required */
+    /*will-change: transform; Opted not to establish a new stacking context.*/
+    /*Establishing a new stacking context 'breaks' the fixed position menu and social media icons.*/
+    /*Performance will take a hit.*/
+    /*background-color: #FFF; A background-color is required. */
     min-height: 100vh;
 }
 
@@ -193,8 +194,8 @@ END: Slideout CSS Styles
 
 
 #panel {
-    padding: 30px;
-    padding-top: 130px;
+    /*padding: 30px;*/
+    /*padding-top: 130px;*/
     background-color: #F5F5F5;
 }
 
@@ -229,32 +230,46 @@ END: Slideout CSS Styles
 
 /*
 Transition Between Routes: Slide
+TODO: Make animations more performant.
 */
 
-.slide-enter-active {
-    animation: slideLeftIn 0.65s ease-out both;
+/*.slide-enter-active {*/
+    /*animation: slideLeftIn 0.45s ease-out both;*/
+/*}*/
+/**/
+/*.slide-leave-active {*/
+    /*animation: slideLeftOut 0.45s ease-in both;*/
+/*}*/
+/**/
+/*@keyframes slideLeftIn {*/
+    /*0% {*/
+        /*transform: translateX(100%);*/
+    /*}*/
+    /*100% {*/
+        /*transform: translateX(0);*/
+    /*}*/
+/*}*/
+/**/
+/*@keyframes slideLeftOut {*/
+    /*0% {*/
+        /*transform: translateX(0);*/
+    /*}*/
+    /*100% {*/
+        /*transform: translateX(-100%);*/
+  /*}*/
+/*}*/
+
+/*
+Transiton Between Routes: Fade
+*/
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
-.slide-leave-active {
-    animation: slideLeftOut 0.65s ease-in both;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease-in;
 }
 
-@keyframes slideLeftIn {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideLeftOut {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-  }
-}
 
 </style>

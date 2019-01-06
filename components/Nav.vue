@@ -26,7 +26,9 @@
 
 
                     <rect
-                      width="500px"
+                      x="-100"
+                      y="0"
+                      width="600px"
                       height="300px"
                       fill="#fff" />
 
@@ -56,10 +58,10 @@
                 <rect
                   id="home-button__rectangle-background"
                   class="home-button__background-masked"
-                  x="0"
+                  x="-100"
                   y="0"
-                  width="400px"
-                  height="250px"
+                  width="600px"
+                  height="300px"
                   fill="rgba(54, 54, 54, 0.85)"
                   transform="translate(0,-35)"/>
 
@@ -490,9 +492,9 @@
         position: relative !important;
         top: 0;
     }
-    #panel {
-        padding: 15px !important;
-    }
+    /*#panel {*/
+        /*padding: 15px !important;*/
+    /*}*/
     .navi-fixed .tile {
         height: inherit;
     }
@@ -582,9 +584,9 @@ IE 9-11
       position: relative !important;
       top: inherit;
   }
-  #panel {
-      padding: 10px !important;
-  }
+  /*#panel {*/
+      /*padding: 10px !important;*/
+  /*}*/
 }
 
 
