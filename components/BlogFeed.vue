@@ -1,9 +1,8 @@
 <template>
   <article class="blog-feed">
-    <h2 class="subtitle is-4">Blog Feed</h2>
 
     <article class="blog-feed__tags">
-      <h2 class="subtitle is-5">Select a tag below:</h2>
+      <h2 class="subtitle is-5">Select a category below:</h2>
       <ul class="tags">
         <nuxt-link to="/blog">
           <li class="tag">all</li>
@@ -19,7 +18,9 @@
     </article>
 
     <article class="blog-feed__posts">
-      <transition-group name="fade">
+      <transition-group
+        name="slide-fade"
+        tag="div">
         <div
           v-for="post in feed"
           :key="post.id"
@@ -54,6 +55,13 @@
           </nuxt-link>
         </div>
       </transition-group>
+      <transition name="slide-fade">
+        <div
+          v-if="feed.length === 0"
+          class="blog-feed__post-notification notification is-warning has-text-centered">
+          <p>No posts found.</p>
+        </div>
+      </transition>
     </article>
 
   </article>
@@ -123,33 +131,69 @@ export default {
 
 <style>
 .blog-feed__tags {
-  margin-top: 15px;
-  margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .blog-feed__tags .tags > a {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 .blog-feed__tags a:first-child .tag {
-  background-color: #CCCB80;
-  color: #363636;
+    background-color: #CCCB80;
+    color: #363636;
 }
 .blog-feed__tags .tag {
-  background-color: #363636;
-  color: #fff;
+    background-color: #363636;
+    color: #fff;
 }
 .blog-feed__tags .nuxt-link-exact-active .tag {
-  background-color: #23D160;
+    background-color: #23D160;
 }
 .blog-feed__post-tags .tags {
-  text-align: right;
+    text-align: right;
 }
 .blog-feed__post-tags {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 .blog-feed__post-thumbnail img {
-  width: 300px;
-  height: 150px;
-  object-fit: contain;
-  object-position: center center;
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    object-position: center center;
+}
+.blog-feed__post-notification {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*
+  Transition for Feed: slide-fade
+*/
+.blog-feed__post {
+    transition: all 0.5s;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+    opacity: 0;
+}
+.slide-fade-enter {
+    transform: translateY(-100px);
+}
+.slide-fade-leave-to {
+    transform: translateX(-100px);
+}
+.slide-fade-enter-active {
+    transition: all 1s ease-in-out;
+}
+.slide-fade-leave-active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.5s ease-in-out, opacity 0.25s ease-in-out;
+}
+.slide-fade-move {
+  transition: transform 1s ease-in-out;
 }
 </style>

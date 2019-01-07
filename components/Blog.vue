@@ -37,9 +37,24 @@ export default {
 
 <style>
 @media screen and (min-width: 767px) {
-  .blog {
-    padding-top: 150px;
-  }
+    .blog {
+        padding-top: 150px;
+    }
 }
 
+/*
+  Transition for Tag Notification and Post: slide-up-fade
+*/
+.slide-up-fade-enter, .slide-up-fade-leave-to {
+    opacity: 0;
+}
+.slide-up-fade-enter {
+    transform: translateY(100px);
+}
+.slide-up-fade-leave-to {
+    transform: translateY(100px);
+}
+.slide-up-fade-enter-active, .slide-up-fade-leave-active {
+    transition: all 1s ease-in-out;
+}
 </style>

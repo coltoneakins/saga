@@ -260,7 +260,7 @@ TODO: Make animations more performant.
 /*}*/
 
 /*
-Transiton Between Routes: Fade
+Transition Between Routes: Fade
 */
 
 .fade-enter, .fade-leave-to {
