@@ -61,6 +61,15 @@ module.exports = {
     ]
   },
 
+
+  /*
+  ** Set global variable for the baseURL
+  */
+  env: {
+    baseURL: (process.env.NODE_ENV === 'production' ? 'https://www.coltoneakins.com' : 'http://localhost:3000')
+  }
+
+
   /*
   ** Customize the progress-bar color
   */
@@ -77,6 +86,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/disquis'
   ],
 
   /*
