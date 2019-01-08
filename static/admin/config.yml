@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# Set up currently for the development repo of my Nuxt project.
+# These lines will need to be changed when the site is generated for GitHub static hosting.
+media_folder: "static/images/uploads"
+public_folder: "/_nuxt/static/images/uploads"
+
+# Define a collection - NetlifyCMS will creat json format blog posts
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "static/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Body", name: "body", widget: "markdown"}

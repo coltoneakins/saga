@@ -67,7 +67,7 @@ module.exports = {
   */
   env: {
     baseURL: (process.env.NODE_ENV === 'production' ? 'https://www.coltoneakins.com' : 'http://localhost:3000')
-  }
+  },
 
 
   /*

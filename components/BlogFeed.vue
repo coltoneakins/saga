@@ -110,7 +110,7 @@ export default {
     methods: {
         webpackImageToStaticPath(thumbnail) {
             // https://github.com/vuejs-templates/webpack/issues/126
-            return require('~/assets/thumbnails/' + thumbnail);
+            return require('~/static/images/thumbnails/' + thumbnail);
         },
         sortFeed() {
             if(this.filter) {

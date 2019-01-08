@@ -4,7 +4,7 @@
     <article class="comments">
       <vue-disqus
         :identifier="$route.name"
-        :url="env.baseURL + $route.fullPath"
+        :url="baseURL + $route.fullPath"
         shortname="coltoneakins"/>
     </article>
   </article>
@@ -12,6 +12,11 @@
 
 <script>
 export default {
+  data: function() {
+      return {
+          baseURL: process.env.baseURL
+      }
+  },
   transition: 'slide-up-fade'
 }
 </script>
