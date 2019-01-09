@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-      <p>© 2018 Colton Eakins - <nuxt-link to="/contact">Contact</nuxt-link></p>
+      <p>© 2019 Colton Eakins - <nuxt-link to="/contact">Contact</nuxt-link></p>
     </div>
   </div>
 </template>

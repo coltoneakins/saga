@@ -58,6 +58,10 @@ module.exports = {
       {rel: 'apple-touch-icon', sizes: '76x76', href: '/favicon-76.png'},
       {rel: 'apple-touch-icon', sizes: '152x152', href: '/favicon-152.png'},
       {rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon-180.png'}
+    ],
+    // Add Netlify Identity widget to site
+    script: [
+      {src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'}
     ]
   },
 
@@ -129,6 +133,7 @@ module.exports = {
 	     '/blog/category/js',
 	     '/blog/category/python',
 	     '/blog/category/emacs',
+	     '/blog/category/web-scraping',
 	     '/blog/category/vue'
      ]
  },
