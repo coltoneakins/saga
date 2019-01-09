@@ -119,6 +119,22 @@ module.exports = {
    },
 
   /*
+  ** Specify Dyanmic Routes to Generate
+  */
+
+ generate: {
+     routes: [
+	     '/blog/category/html',
+	     '/blog/category/css',
+	     '/blog/category/js',
+	     '/blog/category/python',
+	     '/blog/category/emacs',
+	     '/blog/category/vue'
+     ]
+ },
+
+
+  /*
   ** Build configuration
   */
   build: {
