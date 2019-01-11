@@ -1,6 +1,8 @@
 <template>
   <article class="blog-feed">
 
+    <p>{{ allPosts }}</p>
+
     <article class="blog-feed__tags">
       <h2 class="subtitle is-5">Select a category below:</h2>
       <ul class="tags">
@@ -68,6 +70,8 @@
 </template>
 
 <script>
+import allPosts from '~/static/posts/all/all-posts-long.json'
+
 export default {
     props: {
         filter: {
@@ -92,7 +96,8 @@ export default {
                 {id: 0, title: 'Post 1', slug: 'post1', description: 'Description of Post 1', author: 'Colton Eakins', published: 'Jan. 2, 2019', thumbnail: 'python.png', altText: 'Python logo', path: '/blog/post/post1', categories: [{id: 0, text: 'python'}]},
                 {id: 1, title: 'Post 2', slug: 'post2', description: 'Description of Post 2', author: 'Colton Eakins', published: 'Jan. 3, 2019', thumbnail: 'sass.jpg', altText: 'Sass logo', path: '/blog/post/post2', categories: [{id: 0, text: 'html'}, {id: 1, text:'css'}]},
                 {id: 2, title: 'Post 3', slug: 'post3', description: 'Description of Post 3', author: 'Colton Eakins', published: 'Jan. 4, 2019', thumbnail: 'js.jpg', altText: 'JavaScript logo', path: '/blog/post/post3', categories: [{id: 0, text: 'js'}, {id: 1, text:'vue'}]},
-            ]
+            ],
+            allPosts: allPosts
         }
     },
     watch: {
