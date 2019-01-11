@@ -104,7 +104,8 @@ module.exports = {
    '@nuxtjs/sitemap',
    ['@nuxtjs/google-analytics', {
      id: 'UA-131672294-1'
-   }]
+   }],
+   '~/modules/netlify-cms-json-writer'
   ],
 
 
