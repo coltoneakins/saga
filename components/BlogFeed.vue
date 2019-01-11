@@ -1,8 +1,6 @@
 <template>
   <article class="blog-feed">
 
-    <p>{{ allPosts }}</p>
-
     <article class="blog-feed__tags">
       <h2 class="subtitle is-5">Select a category below:</h2>
       <ul class="tags">
@@ -10,8 +8,8 @@
           <li class="tag">all</li>
         </nuxt-link>
         <nuxt-link
-          v-for="tag in categories"
-          :key="tag.id"
+          v-for="(tag, index) in categories"
+          :key="'category_' + index"
           :to="'/blog/category/' + tag.text">
           <li
             class="tag">{{ tag.text }}</li>
@@ -24,31 +22,33 @@
         name="slide-fade"
         tag="div">
         <div
-          v-for="post in feed"
-          :key="post.id"
+          v-for="(post, index) in posts"
+          :key="'post_' + index"
           class="box blog-feed__post">
-          <nuxt-link :to="post.path">
+          <nuxt-link :to="'/blog/page/' + post.slug">
             <article>
               <div class="columns">
                 <div class="column is-3 is-12-mobile">
                   <div class="blog-feed__post-thumbnail">
+
                     <img
+                      v-if="post.thumbnail"
                       :alt="post.altText"
-                      :src="webpackImageToStaticPath(post.thumbnail)">
+                      :src="blogImageToStaticPath(post.thumbnail)">
                   </div>
                 </div>
                 <div class="column is-9 is 12-mobile">
                   <div class="blog-feed__post-content">
                     <div class="title is-5">{{ post.title }}</div>
                     <div class="subtitle is-6">{{ post.description }}</div>
-                    <div class="subtitle is-6">By {{ post.author }} // Published {{ post.published }}</div>
+                    <div class="subtitle is-6">By Colton Eakins // Published {{ post.date }}</div>
                   </div>
                   <div class="blog-feed__post-tags">
                     <ul class="tags">
                       <li
-                        v-for="tag in post.categories"
-                        :key="tag.id"
-                        class="tag">{{ tag.text }}</li>
+                        v-for="(tag, index) in post.tags"
+                        :key="'tag_' + index"
+                        class="tag">{{ tag }}</li>
                     </ul>
                   </div>
                 </div>
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import allPosts from '~/static/posts/all/all-posts-long.json'
+import posts from '~/static/posts/all/all-posts-short.json'
 
 export default {
     props: {
@@ -81,53 +81,39 @@ export default {
     },
     data: function() {
         return {
-            feed: [],
-            categories: [
-                {id: 0, text: 'html'},
-                {id: 1, text: 'css'},
-                {id: 2, text: 'js'},
-                {id: 3, text: 'python'},
-                {id: 4, text: 'emacs'},
-                {id: 5, text: 'web-scraping'},
-                {id: 6, text: 'vue'}
-            ],
-            posts: [
-                //{id: 0, title: '', slug: '', description: '', author: '', published: '', thumbnail: '', altText: '', path: '', categories: [{}]},
-                {id: 0, title: 'Post 1', slug: 'post1', description: 'Description of Post 1', author: 'Colton Eakins', published: 'Jan. 2, 2019', thumbnail: 'python.png', altText: 'Python logo', path: '/blog/post/post1', categories: [{id: 0, text: 'python'}]},
-                {id: 1, title: 'Post 2', slug: 'post2', description: 'Description of Post 2', author: 'Colton Eakins', published: 'Jan. 3, 2019', thumbnail: 'sass.jpg', altText: 'Sass logo', path: '/blog/post/post2', categories: [{id: 0, text: 'html'}, {id: 1, text:'css'}]},
-                {id: 2, title: 'Post 3', slug: 'post3', description: 'Description of Post 3', author: 'Colton Eakins', published: 'Jan. 4, 2019', thumbnail: 'js.jpg', altText: 'JavaScript logo', path: '/blog/post/post3', categories: [{id: 0, text: 'js'}, {id: 1, text:'vue'}]},
-            ],
-            allPosts: allPosts
+            categories: ['html', 'css', 'js', 'python', 'emacs', 'web-scraping', 'vue'],
+            posts: posts.posts
         }
     },
     watch: {
-      $route: function(to, from) {
-        this.sortFeed();
-      }
+        $route: function(to, from) {
+            this.sortFeed();
+        }
     },
     mounted: function () {
-      this.$nextTick(function () {
-        // Run the sortFeed function when the component is mounted to create
-        // the initial feed with all posts (unfiltered).
-        this.sortFeed();
-      })
+        this.$nextTick(function () {
+            // Run the sortFeed function when the component is mounted to create
+            // the initial feed with all posts (unfiltered).
+            this.sortFeed();
+        })
     },
     methods: {
-        webpackImageToStaticPath(thumbnail) {
+        blogImageToStaticPath(thumbnail) {
             // https://github.com/vuejs-templates/webpack/issues/126
-            return require('~/static/images/thumbnails/' + thumbnail);
+            let filename = thumbnail.split('/').slice(-1)[0];
+            return require('~/static/images/thumbnails/' + filename);
         },
         sortFeed() {
             if(this.filter) {
                 if(this.filter.type === 'tag') {
-                    return this.feed = this.posts.filter(post => Boolean(post.categories.find(tag => tag.text === this.filter.slug)));
+                    return this.posts = this.posts.filter(post => Boolean(post.tags.find(tag => tag === this.filter.slug)));
                 } else if(this.filter.type === 'post') {
-                    return this.feed = this.posts.filter(post => post.slug === this.filter.slug);
+                    return this.posts = this.posts.filter(post => post.slug === this.filter.slug);
                 } else {
-                    return this.feed = this.posts;
+                    return this.posts = this.posts;
                 }
             } else {
-                return this.feed = this.posts;
+                return this.posts = this.posts;
         }
       }
     }

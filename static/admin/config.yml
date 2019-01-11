@@ -14,13 +14,15 @@ collections:
     create: true
     extension: json
     format: json
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Type", name: "type", widget: "hidden", default: "post"}
+      - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Alt Text", name: "altText", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
   - name: "portfolio"
@@ -29,12 +31,14 @@ collections:
     create: true
     extension: json
     format: json
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Type", name: "type", widget: "hidden", default: "project"}
+      - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Alt Text", name: "altText", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
