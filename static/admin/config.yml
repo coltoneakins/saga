@@ -3,23 +3,38 @@ backend:
   branch: master
 
 media_folder: "static/images/uploads"
-# This path may have to be changed depending on how Nuxt handles images with nuxt generate
-public_folder: "/_nuxt/static/images/uploads"
+public_folder: "images/uploads"
 
 # Define a collection - NetlifyCMS will creat json format blog posts
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "static/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "static/posts"
+    create: true
     extension: json
     format: json
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    filter:
+      - {field: "tags", value: "css"}
+    fields:
+      - {label: "Type", name: "type", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "portfolio"
+    label: "Portfolio Projects"
+    folder: "static/projects"
+    create: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Type", name: "type", widget: "hidden", default: "project"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
