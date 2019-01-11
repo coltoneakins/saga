@@ -26,10 +26,10 @@ module.exports = function module (moduleOptions) {
 	glob('**/static/projects/*.json', function(err, files) {
 	    files.forEach(function(file) {
 	    	let projectJson = fs.readJsonSync(file);
-		allProjectsLong.posts.push(projectJson);
+		allProjectsLong.projects.push(projectJson);
 		let projectJsonShort = Object.assign({}, projectJson);		    
 		delete projectJsonShort.body;
-		allProjectsShort.posts.push(projectJsonShort);
+		allProjectsShort.projects.push(projectJsonShort);
 	    });
             fs.writeJsonSync(projectsStaticPathLong, allProjectsLong);
             fs.writeJsonSync(projectsStaticPathShort, allProjectsShort);
