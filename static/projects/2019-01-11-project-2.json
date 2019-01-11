@@ -1,0 +1,10 @@
+{
+  "type": "project",
+  "title": "Project 2",
+  "date": "2019-01-11T11:55:33.292Z",
+  "thumbnail": "/images/uploads/netlify.jpg",
+  "body": "This is another project.",
+  "tags": [
+    "css"
+  ]
+}
