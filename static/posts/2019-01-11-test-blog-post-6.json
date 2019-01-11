@@ -1,0 +1,14 @@
+{
+  "type": "post",
+  "title": "Test Blog Post #6",
+  "description": "This is a test",
+  "date": "2019-01-11T19:44:51.518Z",
+  "thumbnail": "/images/uploads/netlify.jpg",
+  "body": "Testttttt teta;khdf;lkjasd;l fkj;lasdkj f;lksdf",
+  "tags": [
+    "html",
+    "css",
+    "js",
+    "vue"
+  ]
+}
