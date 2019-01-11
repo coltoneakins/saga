@@ -1,6 +1,6 @@
 <template>
-  <section class="home-hero">
-    <h2>Hello World!</h2>
+  <section class="home-hero container has-text-centered">
+    <h2>This site is under active construction as of 1/11/2019. Check back soon for something wicked cool!</h2>
   </section>
 </template>
 
@@ -59,6 +59,9 @@ export default {
 <style>
 .home-hero {
   height: calc(100vh - 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 canvas {
   width: 100%;
