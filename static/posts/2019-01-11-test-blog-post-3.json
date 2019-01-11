@@ -1,0 +1,11 @@
+{
+  "type": "post",
+  "title": "Test Blog Post #3",
+  "date": "2019-01-11T07:03:01.539Z",
+  "thumbnail": "/images/uploads/netlify.jpg",
+  "body": "This is a test #3",
+  "tags": [
+    "css",
+    "sass"
+  ]
+}
