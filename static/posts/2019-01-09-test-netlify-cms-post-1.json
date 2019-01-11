@@ -1,8 +1,12 @@
 {
-  "layout": "blog",
-  "title": "Test Netlify CMS Post #1",
+  "title": "Test Blog Post #1",
   "date": "2019-01-09T11:13:35.364Z",
-  "thumbnail": "/_nuxt/static/images/uploads/netlify.jpg",
-  "rating": "5",
-  "body": "# Test Title\n\nI love Netlify. It rocks my socks."
+  "thumbnail": "/images/uploads/netlify.jpg",
+  "body": "# Test Title\n\nI love Netlify. It rocks my socks.",
+  "tags": [
+    "html",
+    "css",
+    "js",
+    "vue"
+  ]
 }
