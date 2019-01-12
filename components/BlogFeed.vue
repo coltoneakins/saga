@@ -10,9 +10,9 @@
         <nuxt-link
           v-for="(tag, index) in categories"
           :key="'category_' + index"
-          :to="'/blog/category/' + tag.text">
+          :to="'/blog/category/' + tag">
           <li
-            class="tag">{{ tag.text }}</li>
+            class="tag">{{ tag }}</li>
         </nuxt-link>
       </ul>
     </article>
@@ -22,7 +22,7 @@
         name="slide-fade"
         tag="div">
         <div
-          v-for="(post, index) in posts"
+          v-for="(post, index) in feed"
           :key="'post_' + index"
           class="box blog-feed__post">
           <nuxt-link :to="'/blog/page/' + post.slug">
@@ -82,7 +82,8 @@ export default {
     data: function() {
         return {
             categories: ['html', 'css', 'js', 'python', 'emacs', 'web-scraping', 'vue'],
-            posts: posts.posts
+            posts: posts.posts,
+            feed: []
         }
     },
     watch: {
@@ -101,19 +102,19 @@ export default {
         blogImageToStaticPath(thumbnail) {
             // https://github.com/vuejs-templates/webpack/issues/126
             let filename = thumbnail.split('/').slice(-1)[0];
-            return require('~/static/images/thumbnails/' + filename);
+            return require('~/static/images/uploads/' + filename);
         },
         sortFeed() {
             if(this.filter) {
                 if(this.filter.type === 'tag') {
-                    return this.posts = this.posts.filter(post => Boolean(post.tags.find(tag => tag === this.filter.slug)));
+                    return this.feed = this.posts.filter(post => Boolean(post.tags.find(tag => tag === this.filter.slug)));
                 } else if(this.filter.type === 'post') {
-                    return this.posts = this.posts.filter(post => post.slug === this.filter.slug);
+                    return this.feed = this.posts.filter(post => post.slug === this.filter.slug);
                 } else {
-                    return this.posts = this.posts;
+                    return this.feed = this.posts;
                 }
             } else {
-                return this.posts = this.posts;
+                return this.feed = this.posts;
         }
       }
     }
