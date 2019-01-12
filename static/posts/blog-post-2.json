@@ -1,0 +1,11 @@
+{
+  "type": "post",
+  "title": "Blog Post 2",
+  "description": "This is another blog post.",
+  "date": "2019-01-11",
+  "body": "# This is a title\n\nThis is some description.",
+  "tags": [
+    "js",
+    "vue"
+  ]
+}
