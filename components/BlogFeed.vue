@@ -25,7 +25,7 @@
           v-for="(post, index) in feed"
           :key="'post_' + index"
           class="box blog-feed__post">
-          <nuxt-link :to="'/blog/page/' + post.slug">
+          <nuxt-link :to="'/blog/post/' + post.slug">
             <article>
               <div class="columns">
                 <div class="column is-3 is-12-mobile">
