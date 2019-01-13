@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article v-if="post">
     <h1 class="title">{{ post.title }}</h1>
     <div v-html="post.body"/>
     <article class="comments">
@@ -21,6 +21,7 @@
     created: function() {
         return this.post = require('~/static/posts/' + this.$route.params.slug + '.json');
     },
-    transition: 'slide-up-fade'
+    transition: 'slide-up-fade',
+    scrollToTop: false
 }
 </script>

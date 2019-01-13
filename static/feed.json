@@ -1,0 +1,40 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Colton Eakins' Blog",
+    "home_page_url": "https://www.coltoneakins.com/",
+    "feed_url": "https://www.coltoneakins.com/blog.json",
+    "description": "Colton Eakins is an interactive front-end developer who blogs about modern web development techniques.",
+    "icon": "https://www.coltoneakins.com/og-image.jpg",
+    "author": {
+        "name": "Colton Eakins",
+        "url": "https://www.coltoneakins.com/contact"
+    },
+    "items": [
+        {
+            "id": "blog-post-1",
+            "content_html": "This is a test.",
+            "url": "https://www.coltoneakins.com/blog/post/blog-post-1",
+            "title": "Blog Post 1",
+            "summary": "This is the first blog post.",
+            "image": "https://www.coltoneakins.com/images/uploads/netlify.jpg",
+            "date_modified": "2019-01-11T06:00:00.000Z",
+            "author": {
+                "name": "Colton Eakins",
+                "url": "https://www.coltoneakins.com/contact"
+            }
+        },
+        {
+            "id": "blog-post-2",
+            "content_html": "# This is a title\n\nThis is some description.",
+            "url": "https://www.coltoneakins.com/blog/post/blog-post-2",
+            "title": "Blog Post 2",
+            "summary": "This is another blog post.",
+            "image": "https://www.coltoneakins.comundefined",
+            "date_modified": "2019-01-11T06:00:00.000Z",
+            "author": {
+                "name": "Colton Eakins",
+                "url": "https://www.coltoneakins.com/contact"
+            }
+        }
+    ]
+}

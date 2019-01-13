@@ -105,7 +105,8 @@ module.exports = {
    ['@nuxtjs/google-analytics', {
      id: 'UA-131672294-1'
    }],
-   '~/modules/netlify-cms-json-writer'
+    '~/modules/netlify-cms-json-writer',
+    '~/modules/blog-feed'
   ],
 
 
@@ -127,17 +128,17 @@ module.exports = {
   ** Specify Dyanmic Routes to Generate
   */
 
- //generate: {
-     //routes: [
-	     //'/blog/category/html',
-	     //'/blog/category/css',
-	     //'/blog/category/js',
-	     //'/blog/category/python',
-	     //'/blog/category/emacs',
-	     //'/blog/category/web-scraping',
-	     //'/blog/category/vue'
-     //]
- //},
+  //generate: {
+      //routes: [
+	      //'/blog/category/html',
+	      //'/blog/category/css',
+	      //'/blog/category/js',
+	      //'/blog/category/python',
+	      //'/blog/category/emacs',
+	      //'/blog/category/web-scraping',
+	      //'/blog/category/vue'
+      //]
+  //},
 
 
   /*
@@ -162,7 +163,7 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        })
+        });
       }
     }
   }
