@@ -158,6 +158,8 @@ export default {
     color: #363636;
 }
 .blog-feed__tags .tag {
+    font-weight: bold;
+    font-size: 1em;
     background-color: #363636;
     color: #fff;
 }

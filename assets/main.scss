@@ -6,7 +6,6 @@
 $dark: #363636;
 $light: #F5F5F5;
 
-$family-sans-serif: "Montserrat",  Arial, Helvetica Neue, Helvetica, sans-serif; 
 $primary: #B1CCCC;
 $link: #CCCB80;
 $body-background-color: $light;
@@ -31,6 +30,7 @@ $navbar-padding-horizontal: 4rem;
 @import "~bulma/sass/elements/container.sass";
 @import "~bulma/sass/elements/title.sass";
 @import "~bulma/sass/elements/box.sass";
+@import "~bulma/sass/elements/form.sass";
 @import "~bulma/sass/components/menu.sass";
 @import "~bulma/sass/components/navbar.sass";
 @import "~bulma/sass/components/level.sass";

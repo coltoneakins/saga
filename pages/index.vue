@@ -1,6 +1,6 @@
 <template>
   <section class="home-hero container has-text-centered">
-    <h2>This site is under active construction as of 1/11/2019. Check back soon for something wicked cool!</h2>
+    <h2>This site is under active construction as of 1/11/2019. Check back soon for something wicked!</h2>
   </section>
 </template>
 
