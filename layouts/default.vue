@@ -56,7 +56,13 @@
 import Nav from '~/components/Nav.vue'
 import SocialMedia from '~/components/SocialMedia.vue'
 import Footer from '~/components/Footer.vue'
-import Slideout from 'slideout'
+// Slideout should only be loaded during client-side render with Nuxt!
+// See build: {vendor: ['slideout']} in the config nuxt.config.js
+// Slideout uses the window object which is only available in browsers.
+// TODO: Use vue-slideout instead to avoid setting a global variable on the window object.
+if(process.client) {
+    window.Slideout = require('slideout');
+}
 
 export default {
     components: {
