@@ -1,6 +1,23 @@
 <template>
-  <section class="home-hero container has-text-centered">
-    <h2>This site is under active construction as of 1/11/2019. Check back soon for something wicked!</h2>
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Colton Eakins
+        </h1>
+        <h2 class="subtitle">
+          Interactive Front-End Developer
+        </h2>
+        <nuxt-link
+          to="/portfolio"
+          class="button is-dark is-outlined">
+          Portfolio</nuxt-link>
+        <nuxt-link
+          to="/contact"
+          class="button is-dark is-outlined">
+          Contact</nuxt-link>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -20,39 +37,42 @@ export default {
   transition: {
     name: 'fade'
   },
-  //mounted: function() {
-    //this.$nextTick(function() {
-      //this.init();
-    //})
-  //},
-  //methods: {
-    //init: function() {
-	    //var scene = new THREE.Scene();
-			//var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-//
-			//var renderer = new THREE.WebGLRenderer();
-			//renderer.setSize( window.innerWidth, window.innerHeight );
-			//document.body.appendChild( renderer.domElement );
-//
-			//var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			//var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			//var cube = new THREE.Mesh( geometry, material );
-			//scene.add( cube );
-//
-			//camera.position.z = 5;
-//
-			//var animate = function () {
-				//requestAnimationFrame( animate );
-//
-				//cube.rotation.x += 0.01;
-				//cube.rotation.y += 0.01;
-//
-				//renderer.render( scene, camera );
-			//};
-//
-			//animate();
-    //}
-  //}
+  mounted: function() {
+    this.$nextTick(function() {
+      this.init();
+    })
+  },
+  methods: {
+    init: function() {
+	    var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 50, window.innerWidth/window.innerHeight, 1, 1000 );
+
+      var container = document.getElementsByClassName('hero')[0];
+
+      var renderer = new THREE.WebGLRenderer({ alpha: true });
+			renderer.setSize( container.offsetWidth, container.offsetHeight);
+			container.appendChild( renderer.domElement );
+
+      var geometry = new THREE.CubeGeometry( 250, 250, 250 );
+      var material = new THREE.MeshBasicMaterial( { color: 0xababab, wireframe: true, wireframeLinewidth: 7 } );
+      var mesh = new THREE.Mesh( geometry, material );
+
+			scene.add( mesh );
+
+			camera.position.z = 600;
+
+			var animate = function () {
+				requestAnimationFrame( animate );
+
+				mesh.rotation.x += 0.001;
+				mesh.rotation.y += 0.001;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+    }
+  }
 }
 </script>
 
@@ -66,5 +86,7 @@ export default {
 canvas {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: -1;
 }
 </style>
