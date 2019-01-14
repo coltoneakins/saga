@@ -7,10 +7,14 @@
 
       <form
         class="form box"
+        name="contact"
         method="POST">
 
         <!-- See: static/dummyform.html -->
-        <input type="hidden" name="contact-form" value="contact" />
+        <input 
+          type="hidden" 
+          name="form-name" 
+          value="contact" >
 
         <div class="hidden">
           <label>Don’t fill this out if you're human: <input name="bot-field" ></label>
@@ -53,7 +57,9 @@
 
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link" type="submit">Submit</button>
+            <button 
+              class="button is-link" 
+              type="submit">Submit</button>
           </div>
         </div>
 
@@ -62,6 +68,8 @@
       <div class="notification has-text-centered">
         All responses are directly emailed to me. Your email is never sold. Your email is only used for the explicit purpose of contacting you back.
       </div>
+
+      <nuxt-child/>
 
     </div>
   </section>
@@ -88,10 +96,10 @@ export default {
     padding-top: 150px;
   }
 }
-.hidden {
+.contact .hidden {
   display: none;
 }
-.notification {
+.contact .notification {
     opacity: 0.5;
 }
 </style>
