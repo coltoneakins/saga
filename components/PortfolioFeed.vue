@@ -29,7 +29,7 @@
         <article
           v-for="(project, index) in feed"
           :key="'project_' + index"
-          class="tile is-4 portfolio-feed__project">
+          class="tile is-4 portfolio-feed__project box">
           <nuxt-link :to="'/portfolio/project/' + project.slug">
             <img
               v-if="project.thumbnail"
@@ -77,7 +77,7 @@ export default {
     },
     data: function() {
         return {
-            categories: ['html', 'css', 'js', 'python', 'emacs', 'web-scraping', 'vue'],
+            categories: ['css', 'js', 'python', 'emacs', 'web-scraping', 'scrapy'],
             projects: projects.projects,
             feed: []
         }

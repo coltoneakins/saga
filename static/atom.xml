@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.coltoneakins.com/</id>
     <title>Colton Eakins&apos; Blog</title>
-    <updated>2019-01-14T05:06:03.245Z</updated>
+    <updated>2019-01-14T05:46:34.821Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Colton Eakins</name>
@@ -18,32 +18,4 @@
     </category>
     <category term="Web Design">
     </category>
-    <entry>
-        <title type="html"><![CDATA[Blog Post 1]]></title>
-        <id>blog-post-1</id>
-        <link href="https://www.coltoneakins.com/blog/post/blog-post-1">
-        </link>
-        <updated>2019-01-11T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the first blog post.]]></summary>
-        <content type="html"><![CDATA[This is a test.]]></content>
-        <author>
-            <name>Colton Eakins</name>
-            <uri>https://www.coltoneakins.com/contact</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Blog Post 2]]></title>
-        <id>blog-post-2</id>
-        <link href="https://www.coltoneakins.com/blog/post/blog-post-2">
-        </link>
-        <updated>2019-01-11T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is another blog post.]]></summary>
-        <content type="html"><![CDATA[# This is a title
-
-This is some description.]]></content>
-        <author>
-            <name>Colton Eakins</name>
-            <uri>https://www.coltoneakins.com/contact</uri>
-        </author>
-    </entry>
 </feed>

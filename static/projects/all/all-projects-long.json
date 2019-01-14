@@ -1,1 +1,1 @@
-{"projects":[]}
+{"projects":[{"type":"project","title":"Scrapy (Python) Website Spider with GUI","description":"I built a sophisticated website spider using an asynchronous networking library for the Python programming language. It has scraped data from hundreds of websites. Read  more . . . ","date":"2019-01-13","thumbnail":"/images/uploads/scrapy.jpg","altText":"Logo for the Scrapy Python library","body":"Project description coming soon!","tags":["python","scrapy","web-scraping"],"slug":"scrapy-python-website-spider-with-gui"}]}

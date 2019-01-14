@@ -1,1 +1,1 @@
-{"posts":[{"type":"post","title":"Blog Post 1","description":"This is the first blog post.","date":"2019-01-11","thumbnail":"/images/uploads/netlify.jpg","altText":"Netlify Logo","tags":["css"],"slug":"blog-post-1"},{"type":"post","title":"Blog Post 2","description":"This is another blog post.","date":"2019-01-11","tags":["js","vue"],"slug":"blog-post-2"}]}
+{"posts":[]}

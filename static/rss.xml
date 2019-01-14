@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Colton Eakins&apos; Blog</title>
         <link>https://www.coltoneakins.com/</link>
         <description>Colton Eakins is an interactive front-end developer who blogs about modern web development techniques.</description>
-        <lastBuildDate>Mon, 14 Jan 2019 05:06:03 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Jan 2019 05:46:34 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -16,27 +16,5 @@
         <category>Web Development</category>
         <category>Web Design</category>
         <atom:link href="https://www.coltoneakins.com/atom.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Blog Post 1]]></title>
-            <link>https://www.coltoneakins.com/blog/post/blog-post-1</link>
-            <guid>https://www.coltoneakins.com/blog/post/blog-post-1</guid>
-            <pubDate>Fri, 11 Jan 2019 06:00:00 GMT</pubDate>
-            <description><![CDATA[This is the first blog post.]]></description>
-            <content:encoded><![CDATA[This is a test.]]></content:encoded>
-            <enclosure url="https://www.coltoneakins.com/images/uploads/netlify.jpg">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Blog Post 2]]></title>
-            <link>https://www.coltoneakins.com/blog/post/blog-post-2</link>
-            <guid>https://www.coltoneakins.com/blog/post/blog-post-2</guid>
-            <pubDate>Fri, 11 Jan 2019 06:00:00 GMT</pubDate>
-            <description><![CDATA[This is another blog post.]]></description>
-            <content:encoded><![CDATA[# This is a title
-
-This is some description.]]></content:encoded>
-            <enclosure url="https://www.coltoneakins.comundefined">
-            </enclosure>
-        </item>
     </channel>
 </rss>
