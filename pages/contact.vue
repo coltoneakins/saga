@@ -7,10 +7,10 @@
 
       <form
         class="form box"
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field">
+        method="POST">
+
+        <!-- See: static/dummyform.html -->
+        <input type="hidden" name="contact-form" value="contact" />
 
         <div class="hidden">
           <label>Don’t fill this out if you're human: <input name="bot-field" ></label>
@@ -23,6 +23,7 @@
             <input
               class="input"
               type="text"
+              name="name"
               placeholder="Name">
           </div>
         </div>
@@ -34,6 +35,7 @@
             <input
               class="input"
               type="email"
+              name="email"
               placeholder="hello@nicetomeet.you">
           </div>
         </div>
@@ -44,6 +46,7 @@
           <div class="control">
             <textarea
               class="textarea"
+              name="message"
               placeholder="Hi Colton,"/>
           </div>
         </div>
@@ -52,7 +55,7 @@
 
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link">Submit</button>
+            <button class="button is-link" type="submit">Submit</button>
           </div>
         </div>
 
