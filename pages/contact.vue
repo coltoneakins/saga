@@ -8,12 +8,13 @@
       <form
         class="form box"
         name="contact"
-        method="POST">
+        method="POST"
+        action="/contact/success">
 
         <!-- See: static/dummyform.html -->
-        <input 
-          type="hidden" 
-          name="form-name" 
+        <input
+          type="hidden"
+          name="form-name"
           value="contact" >
 
         <div class="hidden">
@@ -57,8 +58,8 @@
 
         <div class="field is-grouped">
           <div class="control">
-            <button 
-              class="button is-link" 
+            <button
+              class="button is-link"
               type="submit">Submit</button>
           </div>
         </div>
@@ -66,7 +67,7 @@
       </form>
 
       <div class="notification has-text-centered">
-        All responses are directly emailed to me. Your email is never sold. Your email is only used for the explicit purpose of contacting you back.
+        All responses are directly emailed to me. Your email is never sold. Your email is used only for the explicit purpose of contacting you back.
       </div>
 
       <nuxt-child/>
@@ -98,8 +99,5 @@ export default {
 }
 .contact .hidden {
   display: none;
-}
-.contact .notification {
-    opacity: 0.5;
 }
 </style>

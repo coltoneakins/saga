@@ -216,7 +216,11 @@ END: Slideout CSS Styles
     .navbar-burger {
         display: none;
     }
+    .mobile-menu {
+        display: none; /* To prevent FOUC on desktop. */
+    }
 }
+
 
 .mobile-menu {
     background-color: #E4E4E4;
