@@ -60,7 +60,8 @@
           <div class="control">
             <button
               class="button is-link"
-              type="submit">Submit</button>
+              type="submit"
+              formaction="/contact/success">Submit</button>
           </div>
         </div>
 
