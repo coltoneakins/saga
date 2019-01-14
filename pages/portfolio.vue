@@ -1,23 +1,13 @@
 <template>
-  <section>
-    <h2>This is where I will put my portfolio. It will feature:</h2>
-    <ul>
-      <li>p5.js, three.js, and other interactive animations</li>
-      <li>Vaporware products and landing pages for lead conversion</li>
-      <li>Live code samples</li>
-      <li>SVG animations</li>
-      <li>Python projects</li>
-      <li>Isotope.js sortable grid of projects</li>
-      <li>Seam carving, AI watermark removal, and other algorithms related to images</li>
-      <li>Blog posts with D3.js</li>
-      <li>Jupyter notebooks</li>
-      <li>Literate programming samples</li>
-    </ul>
-  </section>
+  <Portfolio/>
 </template>
 
 <script>
+import Portfolio from '~/components/Portfolio.vue'
 export default {
+    components: {
+      Portfolio
+    },
     scrollToTop: true,
     head () {
         return {
