@@ -62,10 +62,10 @@ export default {
 
           var camera = new THREE.PerspectiveCamera(50, container.offsetWidth/container.offsetHeight, 1, 1800);
 
-          var controls = new THREE.OrbitControls(camera);
+          //var controls = new THREE.OrbitControls(camera);
           camera.position.set(125, 600, 900);
 	        camera.lookAt(scene.position);
-          controls.update();
+          //controls.update();
 
 
 		      var renderer = new THREE.WebGLRenderer({alpha: true, antialias:true});
@@ -76,7 +76,9 @@ export default {
           var textureLoader = new THREE.TextureLoader();
           var cubeGeometry = new THREE.BoxGeometry(150, 150, 150);
           var jsLogoTexture = textureLoader.load(jsCubeImage);
+          jsLogoTexture.flipY = false;
           var jsSpecMapTexture = textureLoader.load(jsCubeSpecMap);
+          jsSpecMapTexture.flipY = false;
           var jsLogoMaterial = new THREE.MeshToonMaterial({map: jsLogoTexture});
           jsLogoMaterial.specularMap = jsSpecMapTexture;
           var jsColorMaterial = new THREE.MeshToonMaterial({color: 0xF0DB4F});
@@ -93,7 +95,9 @@ export default {
 
 
           var pythonLogoTexture = textureLoader.load(pythonCubeImage);
+          pythonLogoTexture.flipY = false;
           var pythonSpecMapTexture = textureLoader.load(pythonCubeSpecMap);
+          pythonSpecMapTexture.flipY = false;
           var pythonLogoMaterial = new THREE.MeshToonMaterial({map: pythonLogoTexture});
           pythonLogoMaterial.specularMap = pythonSpecMapTexture;
           var pythonColorMaterial = new THREE.MeshToonMaterial({color: 0x3776AB});
@@ -110,7 +114,9 @@ export default {
 
 
           var sassLogoTexture = textureLoader.load(sassCubeImage);
+          sassLogoTexture.flipY = false;
           var sassSpecMapTexture = textureLoader.load(sassCubeSpecMap);
+          pythonSpecMapTexture.flipY = false;
           var sassLogoMaterial = new THREE.MeshToonMaterial({map: sassLogoTexture});
           sassLogoMaterial.specularMap = sassSpecMapTexture;
           var sassColorMaterial = new THREE.MeshToonMaterial({color: 0xFFFFFF});
@@ -126,8 +132,9 @@ export default {
           scene.add(sassMesh);
 
 
-	        var light = new THREE.PointLight(0xffffff);
-	        light.position.set(100,250,100);
+	        //var light = new THREE.SpotLight(0xffffff, 1);
+          var light = new THREE.HemisphereLight( 0xFFFFFF, 0x080820, 1 );
+	        light.position.set(125, 700, 900);
 	        scene.add(light);
 
 
@@ -157,33 +164,33 @@ export default {
             //camera.position.z = Math.sin( timer ) * 800;
             var t0 = clock.getElapsedTime();
 	          var jsTime = 0.05 * t0;
-            var pythonTime = 40 + jsTime;
-            var sassTime = 95 + jsTime;
+            var pythonTime = 120 + jsTime;
+            var sassTime = 30 + jsTime;
 
             jsMesh.position.x = position(jsTime).x
             jsMesh.position.y = position(jsTime).y
             jsMesh.position.z = position(jsTime).z
-            jsMesh.rotation.x += 0.01
-            jsMesh.rotation.y += 0.01
-            jsMesh.rotation.z += 0.01
+            jsMesh.rotation.x += 0.005
+            jsMesh.rotation.y += 0.005
+            jsMesh.rotation.z += 0.005
 
             pythonMesh.position.x = position(pythonTime).x
             pythonMesh.position.y = position(pythonTime).y
             pythonMesh.position.z = position(pythonTime).z
-            pythonMesh.rotation.x += 0.01
-            pythonMesh.rotation.y -= 0.01
-            pythonMesh.rotation.z -= 0.01
+            pythonMesh.rotation.x += 0.005
+            pythonMesh.rotation.y -= 0.005
+            pythonMesh.rotation.z -= 0.005
 
             sassMesh.position.x = position(sassTime).x
             sassMesh.position.y = position(sassTime).y
             sassMesh.position.z = position(sassTime).z
-            sassMesh.rotation.x -= 0.01
-            sassMesh.rotation.y += 0.01
-            sassMesh.rotation.z -= 0.01
+            sassMesh.rotation.x -= 0.005
+            sassMesh.rotation.y += 0.005
+            sassMesh.rotation.z -= 0.005
 
 
 
-            controls.update();
+            //controls.update();
             renderer.render(scene, camera);
           }
 

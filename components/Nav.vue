@@ -536,6 +536,10 @@
     }
 }
 
+.navigation__menu a {
+    outline: 0;
+}
+
 
 
 /*
