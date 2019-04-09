@@ -56,12 +56,14 @@ export default {
 
           var container = document.getElementsByClassName('hero')[0];
 
+          var clock = new THREE.Clock();
+
           var scene = new THREE.Scene();
 
-          var camera = new THREE.PerspectiveCamera(75, container.offsetWidth/container.offsetHeight, 1, 1000);
+          var camera = new THREE.PerspectiveCamera(50, container.offsetWidth/container.offsetHeight, 1, 1800);
 
           var controls = new THREE.OrbitControls(camera);
-          camera.position.set(600, 500, 75);
+          camera.position.set(125, 600, 900);
 	        camera.lookAt(scene.position);
           controls.update();
 
@@ -74,7 +76,9 @@ export default {
           var textureLoader = new THREE.TextureLoader();
           var cubeGeometry = new THREE.BoxGeometry(150, 150, 150);
           var jsLogoTexture = textureLoader.load(jsCubeImage);
+          var jsSpecMapTexture = textureLoader.load(jsCubeSpecMap);
           var jsLogoMaterial = new THREE.MeshToonMaterial({map: jsLogoTexture});
+          jsLogoMaterial.specularMap = jsSpecMapTexture;
           var jsColorMaterial = new THREE.MeshToonMaterial({color: 0xF0DB4F});
           var jsMaterials = [
             jsColorMaterial,
@@ -88,9 +92,55 @@ export default {
           scene.add(jsMesh);
 
 
+          var pythonLogoTexture = textureLoader.load(pythonCubeImage);
+          var pythonSpecMapTexture = textureLoader.load(pythonCubeSpecMap);
+          var pythonLogoMaterial = new THREE.MeshToonMaterial({map: pythonLogoTexture});
+          pythonLogoMaterial.specularMap = pythonSpecMapTexture;
+          var pythonColorMaterial = new THREE.MeshToonMaterial({color: 0x3776AB});
+          var pythonMaterials = [
+            pythonColorMaterial,
+            pythonColorMaterial,
+            pythonColorMaterial,
+            pythonColorMaterial,
+            pythonLogoMaterial,
+            pythonLogoMaterial
+          ];
+          var pythonMesh = new THREE.Mesh(cubeGeometry, pythonMaterials);
+          scene.add(pythonMesh);
+
+
+          var sassLogoTexture = textureLoader.load(sassCubeImage);
+          var sassSpecMapTexture = textureLoader.load(sassCubeSpecMap);
+          var sassLogoMaterial = new THREE.MeshToonMaterial({map: sassLogoTexture});
+          sassLogoMaterial.specularMap = sassSpecMapTexture;
+          var sassColorMaterial = new THREE.MeshToonMaterial({color: 0xFFFFFF});
+          var sassMaterials = [
+            sassColorMaterial,
+            sassColorMaterial,
+            sassColorMaterial,
+            sassColorMaterial,
+            sassLogoMaterial,
+            sassLogoMaterial
+          ];
+          var sassMesh = new THREE.Mesh(cubeGeometry, sassMaterials);
+          scene.add(sassMesh);
+
+
 	        var light = new THREE.PointLight(0xffffff);
 	        light.position.set(100,250,100);
 	        scene.add(light);
+
+
+          function position(t) {
+	          // x(t) = cos(2t)*(3+cos(3t))
+	          // y(t) = sin(2t)*(3+cos(3t))
+	          // z(t) = sin(3t)
+	          return new THREE.Vector3(
+			        160.0 * Math.cos(2.0 * t) * (3.0 + Math.cos(3.0 * t)),
+			        160.0 * Math.sin(2.0 * t) * (3.0 + Math.cos(3.0 * t)),
+			        400.0 * Math.sin(3.0 * t) );
+          }
+
 
           function onWindowResize() {
             camera.aspect = container.offsetWidth/container.offsetHeight;
@@ -105,6 +155,34 @@ export default {
 
           function render() {
             //camera.position.z = Math.sin( timer ) * 800;
+            var t0 = clock.getElapsedTime();
+	          var jsTime = 0.05 * t0;
+            var pythonTime = 40 + jsTime;
+            var sassTime = 95 + jsTime;
+
+            jsMesh.position.x = position(jsTime).x
+            jsMesh.position.y = position(jsTime).y
+            jsMesh.position.z = position(jsTime).z
+            jsMesh.rotation.x += 0.01
+            jsMesh.rotation.y += 0.01
+            jsMesh.rotation.z += 0.01
+
+            pythonMesh.position.x = position(pythonTime).x
+            pythonMesh.position.y = position(pythonTime).y
+            pythonMesh.position.z = position(pythonTime).z
+            pythonMesh.rotation.x += 0.01
+            pythonMesh.rotation.y -= 0.01
+            pythonMesh.rotation.z -= 0.01
+
+            sassMesh.position.x = position(sassTime).x
+            sassMesh.position.y = position(sassTime).y
+            sassMesh.position.z = position(sassTime).z
+            sassMesh.rotation.x -= 0.01
+            sassMesh.rotation.y += 0.01
+            sassMesh.rotation.z -= 0.01
+
+
+
             controls.update();
             renderer.render(scene, camera);
           }
