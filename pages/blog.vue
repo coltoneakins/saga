@@ -7,7 +7,7 @@ import Blog from '~/components/Blog.vue'
 
 export default {
     components: {
-      Blog
+        Blog
     },
     scrollToTop: true,
     head () {
@@ -15,9 +15,13 @@ export default {
             title: 'Colton Eakins // Modern Front-End Developer // Blog',
             meta: [
                 { hid: 'description', name: 'description', content: 'Colton writes blog posts that dive deep into web development.' }
-        ]
-      }
+            ]
+        }
     },
-    transition: 'fade'
+    transition: {
+        appear: true,
+        name: 'fade'
+    }
+
 }
 </script>

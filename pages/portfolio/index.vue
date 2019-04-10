@@ -1,3 +1,9 @@
 <template>
-  <p class="has-text-centered">I am always working on new projects. Check back soon!</p>
+  <p class="has-text-centered">More projects coming  soon!</p>
 </template>
+
+<script>
+export default {
+  transition: 'slide-up-fade'
+}
+</script>

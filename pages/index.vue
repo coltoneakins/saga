@@ -44,6 +44,7 @@ export default {
         }
     },
     transition: {
+        appear: true,
         name: 'fade'
     },
     mounted: function() {
@@ -61,6 +62,7 @@ export default {
           var scene = new THREE.Scene();
 
           var camera = new THREE.PerspectiveCamera(50, container.offsetWidth/container.offsetHeight, 1, 1800);
+          //TODO Fix camera aspect ratio
 
           //var controls = new THREE.OrbitControls(camera);
           camera.position.set(125, 600, 900);

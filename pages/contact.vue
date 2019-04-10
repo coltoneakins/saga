@@ -68,7 +68,7 @@
       </form>
 
       <div class="notification has-text-centered">
-        All responses are directly emailed to me. Your email is never sold. Your email is used only for the explicit purpose of contacting you back.
+        All responses are directly emailed to me. Your information is kept private.
       </div>
 
       <nuxt-child/>
@@ -85,10 +85,13 @@ export default {
             title: 'Colton Eakins // Modern Front-End Developer // Contact',
             meta: [
                 { hid: 'description', name: 'description', content: 'Contact Colton Eakins for web development.' }
-        ]
-      }
+            ]
+        }
     },
-    transition: 'fade'
+    transition: {
+        appear: true,
+        name: 'fade'
+    }
 }
 </script>
 

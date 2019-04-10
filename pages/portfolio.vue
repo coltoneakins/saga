@@ -6,7 +6,7 @@
 import Portfolio from '~/components/Portfolio.vue'
 export default {
     components: {
-      Portfolio
+        Portfolio
     },
     scrollToTop: true,
     head () {
@@ -17,6 +17,9 @@ export default {
             ]
         }
     },
-    transition: 'fade'
+    transition: {
+        appear: true,
+        name: 'fade'
+    }
 }
 </script>

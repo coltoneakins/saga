@@ -81,7 +81,8 @@
           </nuxt-link>
         </div>
       </transition-group>
-      <transition name="slide-fade">
+      <transition
+        name="slide-fade">
         <div
           v-if="feed.length === 0"
           class="blog-feed__post-notification notification is-warning has-text-centered">
@@ -211,16 +212,12 @@ export default {
     transform: translateY(-100px);
 }
 .slide-fade-leave-to {
-    transform: translateX(-100px);
+    transform: translateY(-100px);
 }
 .slide-fade-enter-active {
     transition: all 1s ease-in-out;
 }
 .slide-fade-leave-active {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
     transition: all 0.5s ease-in-out, opacity 0.25s ease-in-out;
 }
 .slide-fade-move {
