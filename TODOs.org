@@ -42,6 +42,8 @@ CLOSED: [2018-12-29 Sat 01:25]
 ** DONE Set up sitemap.xml
 CLOSED: [2018-12-29 Sat 01:25]
 - Added using Nuxt module @nuxtjs/sitemap.
+*** DONE Fix sitemap.xml file to add hostname.
+    CLOSED: [2019-05-07 Tue 21:08]
 ** DONE Set up CNAME file for GitHub hosting.
    CLOSED: [2018-12-28 Fri 23:57]
 ** DONE Add Footer component.
@@ -97,4 +99,6 @@ CLOSED: [2019-01-03 Thu 17:26]
 CLOSED: [2019-01-12 Sat 23:32]
 - Switched the default body CSS styles to use the native font stack.
 ** TODO Setup Org File Parsing
-** TODO Setup canonical URLs for the blog and portfolio pages.
+** DONE Setup canonical URLs for the blog and portfolio pages.
+   CLOSED: [2019-05-07 Tue 20:58]
+** TODO Add robots.txt file.

@@ -8,19 +8,19 @@ module.exports = function module (moduleOptions) {
   const feed = new Feed({
     title: "Colton Eakins' Blog",
     description: 'Colton Eakins is an interactive front-end developer who blogs about modern web development techniques.',
-    id: 'https://www.coltoneakins.com/',
-    link: 'https://www.coltoneakins.com/',
-    image: 'https://www.coltoneakins.com/og-image.jpg',
-    favicon: 'https://www.coltoneakins.com/favicon.ico',
+    id: 'https://coltoneakins.com/',
+    link: 'https://coltoneakins.com/',
+    image: 'https://coltoneakins.com/og-image.jpg',
+    favicon: 'https://coltoneakins.com/favicon.ico',
     copyright: 'All rights reserved 2019, Colton Eakins',
     feedLinks: {
-      rss: 'https://www.coltoneakins.com/rss.xml',
-      json: 'https://www.coltoneakins.com/blog.json',
-      atom: 'https://www.coltoneakins.com/atom.xml'
+      rss: 'https://coltoneakins.com/rss.xml',
+      json: 'https://coltoneakins.com/blog.json',
+      atom: 'https://coltoneakins.com/atom.xml'
     },
     author: {
       name: 'Colton Eakins',
-      link: 'https://www.coltoneakins.com/contact'
+      link: 'https://coltoneakins.com/contact'
     }
   });
 
@@ -28,17 +28,17 @@ module.exports = function module (moduleOptions) {
     feed.addItem({
       title: post.title,
       id: post.slug,
-      link: 'https://www.coltoneakins.com/blog/post/' + post.slug,
+      link: 'https://coltoneakins.com/blog/post/' + post.slug,
       description: post.description,
       content: post.body,
       author: [
         {
           name: 'Colton Eakins',
-          link: 'https://www.coltoneakins.com/contact'
+          link: 'https://coltoneakins.com/contact'
         }
       ],
       date: new Date(post.date + 'T00:00:00'),
-      image: 'https://www.coltoneakins.com' + post.thumbnail
+      image: 'https://coltoneakins.com' + post.thumbnail
     });
   });
 

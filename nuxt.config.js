@@ -22,15 +22,15 @@ module.exports = {
       {property: 'og:image:height', content: '279'},
       {property: 'og:description', content: 'Colton Eakins is a front-end developer who uses modern web development techniques.'},
       {property: 'og:title', content: 'Colton Eakins, Front-End Developer'},
-      {property: 'og:url', content: 'https://www.coltoneakins.com/'},
-      {property: 'og:image', content: 'https://www.coltoneakins.com/og-image.jpg'},
+      {property: 'og:url', content: 'https://coltoneakins.com/'},
+      {property: 'og:image', content: 'https://coltoneakins.com/og-image.jpg'},
       // Twitter sharing meta tags
       // Requires @username; TODO: Create Twitter account.
       // LinkedIn sharing meta tags
       {property: 'og:title', content: 'Colton Eakins, Front-End Developer'},
       {property: 'og:image', content: 'https://www.coltoneakins.com/og-image-linkedin.jpg'},
       {property: 'og:description', content: 'Colton Eakins is a front-end developer who uses modern web development techniques.'},
-      {property: 'og:url', content: 'https://www.coltoneakins.com/'},
+      {property: 'og:url', content: 'https://coltoneakins.com/'},
       // Google Search Console site verification meta tag
       {name: 'google-site-verification', content: 'F5GKzEWKqHvKwwjuvH7o4UFW6Knwea0Grba-1Gks4Lg'}
     ],
@@ -70,7 +70,7 @@ module.exports = {
   ** Set global variable for the baseURL
   */
   env: {
-    baseURL: (process.env.NODE_ENV === 'production' ? 'https://www.coltoneakins.com' : 'http://localhost:3000')
+    baseURL: (process.env.NODE_ENV === 'production' ? 'https://coltoneakins.com' : 'http://localhost:3000')
   },
 
 
@@ -114,6 +114,7 @@ module.exports = {
   ** Sitemap Options
   */
   sitemap: {
+        hostname: 'https://coltoneakins.com',
 	      path: '/sitemap.xml',
 	      generate: true,
 	      routes: [
