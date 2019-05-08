@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Colton Eakins&apos; Blog</title>
-        <link>https://www.coltoneakins.com/</link>
+        <link>https://coltoneakins.com/</link>
         <description>Colton Eakins is an interactive front-end developer who blogs about modern web development techniques.</description>
-        <lastBuildDate>Wed, 08 May 2019 02:06:53 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 08 May 2019 02:18:13 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Colton Eakins&apos; Blog</title>
-            <url>https://www.coltoneakins.com/og-image.jpg</url>
-            <link>https://www.coltoneakins.com/</link>
+            <url>https://coltoneakins.com/og-image.jpg</url>
+            <link>https://coltoneakins.com/</link>
         </image>
         <copyright>All rights reserved 2019, Colton Eakins</copyright>
         <category>Web Development</category>
         <category>Web Design</category>
-        <atom:link href="https://www.coltoneakins.com/atom.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://coltoneakins.com/atom.xml" rel="self" type="application/rss+xml"/>
     </channel>
 </rss>

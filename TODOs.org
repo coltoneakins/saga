@@ -103,3 +103,4 @@ CLOSED: [2019-01-12 Sat 23:32]
    CLOSED: [2019-05-07 Tue 20:58]
 ** DONE Add robots.txt file.
    CLOSED: [2019-05-07 Tue 21:13]
+** TODO Prevent Contact page form being submitted with no input.

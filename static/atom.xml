@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://www.coltoneakins.com/</id>
+    <id>https://coltoneakins.com/</id>
     <title>Colton Eakins&apos; Blog</title>
-    <updated>2019-05-08T02:06:53.986Z</updated>
+    <updated>2019-05-08T02:18:13.331Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Colton Eakins</name>
-        <uri>https://www.coltoneakins.com/contact</uri>
+        <uri>https://coltoneakins.com/contact</uri>
     </author>
-    <link rel="alternate" href="https://www.coltoneakins.com/"/>
-    <link rel="self" href="https://www.coltoneakins.com/atom.xml"/>
+    <link rel="alternate" href="https://coltoneakins.com/"/>
+    <link rel="self" href="https://coltoneakins.com/atom.xml"/>
     <subtitle>Colton Eakins is an interactive front-end developer who blogs about modern web development techniques.</subtitle>
-    <logo>https://www.coltoneakins.com/og-image.jpg</logo>
-    <icon>https://www.coltoneakins.com/favicon.ico</icon>
+    <logo>https://coltoneakins.com/og-image.jpg</logo>
+    <icon>https://coltoneakins.com/favicon.ico</icon>
     <rights>All rights reserved 2019, Colton Eakins</rights>
     <category term="Web Development">
     </category>

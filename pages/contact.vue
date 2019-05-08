@@ -68,7 +68,7 @@
       </form>
 
       <div class="notification has-text-centered">
-        All responses are directly emailed to me. Your information is kept private.
+        All responses are emailed directly to me. Your email is not shared. You will never be sent spam. Pinky promise.
       </div>
 
       <nuxt-child/>

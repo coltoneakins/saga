@@ -1,13 +1,13 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "Colton Eakins' Blog",
-    "home_page_url": "https://www.coltoneakins.com/",
-    "feed_url": "https://www.coltoneakins.com/blog.json",
+    "home_page_url": "https://coltoneakins.com/",
+    "feed_url": "https://coltoneakins.com/blog.json",
     "description": "Colton Eakins is an interactive front-end developer who blogs about modern web development techniques.",
-    "icon": "https://www.coltoneakins.com/og-image.jpg",
+    "icon": "https://coltoneakins.com/og-image.jpg",
     "author": {
         "name": "Colton Eakins",
-        "url": "https://www.coltoneakins.com/contact"
+        "url": "https://coltoneakins.com/contact"
     },
     "items": []
 }
