@@ -101,4 +101,5 @@ CLOSED: [2019-01-12 Sat 23:32]
 ** TODO Setup Org File Parsing
 ** DONE Setup canonical URLs for the blog and portfolio pages.
    CLOSED: [2019-05-07 Tue 20:58]
-** TODO Add robots.txt file.
+** DONE Add robots.txt file.
+   CLOSED: [2019-05-07 Tue 21:13]
