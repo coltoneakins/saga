@@ -10,7 +10,15 @@
 
 <script>
 export default {
-  transition: 'slide-up-fade'
+    transition: 'slide-up-fade',
+    head () {
+        let canonicalURL = process.env.baseURL + '/blog/';
+        return {
+            link: [
+                {rel: 'canonical', href: canonicalURL}
+            ]
+        }
+    }
 }
 </script>
 

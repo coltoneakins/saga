@@ -1,0 +1,100 @@
+* Clock
+:LOGBOOK:
+CLOCK: [2019-01-08 Tue 03:34]--[2019-01-08 Tue 03:59] =>  0:25
+CLOCK: [2019-01-08 Tue 01:37]--[2019-01-08 Tue 02:02] =>  0:25
+CLOCK: [2019-01-07 Mon 20:31]--[2019-01-07 Mon 21:29] =>  0:58
+CLOCK: [2019-01-07 Mon 19:16]--[2019-01-07 Mon 19:41] =>  0:25
+:END:
+
+* TODOs List
+** DONE Make <=IE11 backup navigation menu.
+   CLOSED: [2018-12-27 Thu 01:21]
+** DONE Make mobile-only menu.
+   CLOSED: [2018-12-26 Wed 19:19]
+   - Added dependency slideout.js.
+   - Added a menu that slides out from the right of the screen.
+** TODO Make site more accessible.
+** DONE Make social media icons mobile responsive.
+   CLOSED: [2018-12-28 Fri 13:12]
+** DONE Make static blog with Disqus integration.
+CLOSED: [2019-01-12 Sat 23:31]
+- Warning: Dynamic routes are ignored by the =generate= command in Nuxt.
+- See:
+  - https://nuxtjs.org/guide/routing
+  - https://router.vuejs.org/guide/essentials/dynamic-matching.html#reacting-to-params-changes
+*** DONE Set up routing for the blog with post titles and categories.
+CLOSED: [2019-01-07 Mon 17:16]
+*** TODO Set up 404 pages for invalid post titles or categories.
+- Handled automatically on the *production* version of the Nuxt site. If a JavaScript error occurs (like navigating to a fake blog post slug with no corresponding JSON file), a 404 page is given.
+*** TODO Set up 'In a rush?' quick links and summaries for each blog post.
+*** DONE Set up Disqus
+CLOSED: [2019-01-11 Fri 21:19]
+- https://github.com/ktquez/vue-disqus
+  - This is a vue plugin. This is how you set it up with Nuxt: https://nuxtjs.org/guide/plugins/#vue-plugins
+*** DONE Set up RSS feed
+CLOSED: [2019-01-12 Sat 23:28]
+- Added =feed= npm package and created a custom Nuxt module to generate RSS, Atom, and JSON feeds at build.
+** DONE Set up favicon.
+   CLOSED: [2018-12-28 Fri 18:16]
+** DONE Set up SEO meta data.
+CLOSED: [2018-12-29 Sat 01:25]
+- Just added a basic title and description to the four main pages: home, portfolio, blog, and contact.
+** DONE Set up sitemap.xml
+CLOSED: [2018-12-29 Sat 01:25]
+- Added using Nuxt module @nuxtjs/sitemap.
+** DONE Set up CNAME file for GitHub hosting.
+   CLOSED: [2018-12-28 Fri 23:57]
+** DONE Add Footer component.
+CLOSED: [2018-12-29 Sat 02:28]
+** DONE Set up 3D graphics.
+   CLOSED: [2019-04-09 Tue 20:05]
+** DONE Add SM share meta tags for Facebook, Twitter, and LinkedIn.
+CLOSED: [2019-01-02 Wed 15:43]
+- Added the same tags to all pages.
+  - TODO make the meta tags specific to the content on each page.
+- Did not add Twitter; requires @username.
+  - TODO Create Twitter account and meta tags.
+** DONE Set up portfolio grid with sortable categories.
+   CLOSED: [2019-04-09 Tue 20:05]
+** TODO Set up scroll.js / scroll-responsive interactions.
+** DONE Set up contact form w/ captcha.
+CLOSED: [2019-01-03 Thu 17:27]
+- I just set up a basic Google form for the time being.
+#+BEGIN_SRC html
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLbEBSLLey_A5Dgt24lxc6R2HMtRIAyE3AKA2r3mAI6Ay5FQ/viewform?embedded=true" width="640" height="790" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+#+END_SRC
+- TODO: Switch to a serverless contact form for a static site.
+  - AWS Lambda seems to be a popular choice.
+- Netlify has form handling built-in! https://www.netlify.com/docs/form-handling/
+- Switched to Netlify: https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
+- I disabled the Netlify pre-render BETA feature. It messed with the prerendering that I was already doing with Nuxt. See: https://github.com/nuxt/nuxt.js/issues/30
+  - Actually, it appears to be an error with Netlify form handling injecting code into the page. Netlify is causing the error.
+    - The problem occurs due to a mismatch between what Nuxt/Vue expects on the pre-rendered page and what code Netlify injects itself into the page. See also:
+      - https://github.com/nuxt/nuxt.js/issues/727
+
+** TODO Use more creative writing and rhetoric to form charisma and character on the site. Form an identity with self-actualization.
+** DONE Add Google Analytics tracking code for website statistics.
+CLOSED: [2019-01-02 Wed 16:38]
+- Google Analytics
+  - Added with @nuxtjs/google-analytics
+- Google Signals
+- Google Search Console
+  - Added google-site-verification meta tag
+- TODO: Complete Google Analytics for Power Users course:
+  - https://analytics.google.com/analytics/academy/course/9/unit/1/lesson/1
+** DONE Set Up Page Transitions Between Routes
+CLOSED: [2019-01-03 Thu 17:26]
+- Set up a simple slide out animation.
+- Eventually, I want to do more complicated and stateful animations changes between routes as discussed here:
+  https://css-tricks.com/simple-server-side-rendering-routing-page-transitions-nuxt-js/
+- More interactive animations like a native mobile application.
+- Changed it to a fade out transitions.
+** TODO Make custom error and 404 pages.
+- https://nuxtjs.org/guide/async-data#handling-errors
+** TODO Set up a custom loading bar
+- https://nuxtjs.org/api/configuration-loading
+** DONE Use native font stack and fix fonts across website.
+CLOSED: [2019-01-12 Sat 23:32]
+- Switched the default body CSS styles to use the native font stack.
+** TODO Setup Org File Parsing
+** TODO Setup canonical URLs for the blog and portfolio pages.
