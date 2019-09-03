@@ -2,9 +2,12 @@
   <section class="portfolio section">
     <div class="container">
       <h1 class="title">Portfolio</h1>
-      <PortfolioFeed
-        :filter="routeToFilter" />
-      <nuxt-child/>
+      <PortfolioFeed :filter="routeToFilter" />
+      <no-ssr>
+        <transition name="slide-up-fade">
+          <nuxt-child/>
+        </transition>
+      </no-ssr>
     </div>
   </section>
 </template>
@@ -37,24 +40,25 @@ export default {
 
 <style>
 @media screen and (min-width: 767px) {
-    .portfolio {
-        padding-top: 150px;
-    }
+  .portfolio {
+    padding-top: 150px;
+  }
 }
 
 /*
   Transition for Tag Notification and Project: slide-up-fade
 */
 .slide-up-fade-enter, .slide-up-fade-leave-to {
-    opacity: 0;
+  opacity: 0;
 }
 .slide-up-fade-enter {
-    transform: translateY(100px);
+  transform: translateY(100px);
 }
 .slide-up-fade-leave-to {
-    transform: translateY(100px);
+  transform: translateY(100px);
 }
 .slide-up-fade-enter-active, .slide-up-fade-leave-active {
-    transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
+
 </style>

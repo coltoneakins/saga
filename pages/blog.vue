@@ -12,7 +12,7 @@ export default {
     scrollToTop: true,
     head () {
         return {
-            title: 'Colton Eakins // Modern Front-End Developer // Blog',
+            title: 'Colton Eakins // Modern Web Developer // Blog',
             meta: [
                 { hid: 'description', name: 'description', content: 'Colton writes blog posts that dive deep into web development.' }
             ]

@@ -104,3 +104,16 @@ CLOSED: [2019-01-12 Sat 23:32]
 ** DONE Add robots.txt file.
    CLOSED: [2019-05-07 Tue 21:13]
 ** TODO Prevent Contact page form being submitted with no input.
+** TODO Make 3D Animations More Interactive
+** TODO Add Humans.txt File
+** TODO Correct Errors with Sitemap.xml and Submit via Google Search Console
+** TODO Add Logo v.2
+** TODO Pick Better Fonts
+** TODO Create Better Form Handling
+** TODO Make the blog more of a seperate entity. Give it a unique name.
+** TODO Set up Night Mode
+** TODO Add eror classes and messages in case a component doesn't render.
+** TODO Add canonical links.
+** TODO Fix Sitemap to Show All Projects and Blog Posts
+** TODO Fix 404 Errors to Direct Dynamic Routes
+- This is caused by the =nuxt generate= command not making static pages for the categories used on the =/portfolio= and =/blog= page.

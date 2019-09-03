@@ -1,12 +1,12 @@
 <template>
   <section class="hero is-fullheight">
-    <div class="hero-body">
+    <div class="home-hero">
       <div class="container">
         <h1 class="title">
           Colton Eakins
         </h1>
         <h2 class="subtitle">
-          Interactive Front-End Developer
+          Interactive Web Developer
         </h2>
         <nuxt-link
           to="/portfolio"
@@ -37,7 +37,7 @@ export default {
     scrollToTop: true,
     head () {
         return {
-            title: 'Colton Eakins // Modern Front-End Developer // Home',
+            title: 'Colton Eakins // Modern Web Developer // Home',
             meta: [
                 { hid: 'description', name: 'description', content: 'Colton Eakins. Interactive front-end developer. Colton writes blog posts that dive deep into web development.' }
             ]
@@ -215,5 +215,9 @@ canvas {
   height: 100%;
   position: absolute;
   z-index: -1;
+}
+.home-hero .title {
+  font-size: 58px;
+  font-weight: bold;
 }
 </style>

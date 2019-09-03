@@ -7,11 +7,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "Colton Eakins // Modern Front-End Developer // Portfolio and Blog",
+    title: "Colton Eakins // Modern Web Developer // Portfolio and Blog",
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: 'Colton Eakins. Interactive front-end developer. Colton writes blog posts that dive deep into web development.'},
+      {hid: 'description', name: 'description', content: 'Colton Eakins. Interactive web developer. Colton writes blog posts that dive deep into web development.'},
       {name: 'msapplication-TileColor', content: '#000000'},
       {name: 'theme-color', content: '#ffffff'},
       {name: 'msapplication-TileImage', content: '/favicon-144.png'},
@@ -20,16 +20,16 @@ module.exports = {
       // Facebook sharing meta tags
       {property: 'og:image:width', content: '279'},
       {property: 'og:image:height', content: '279'},
-      {property: 'og:description', content: 'Colton Eakins is a front-end developer who uses modern web development techniques.'},
-      {property: 'og:title', content: 'Colton Eakins, Front-End Developer'},
+      {property: 'og:description', content: 'Colton Eakins is a web developer who uses modern web development techniques.'},
+      {property: 'og:title', content: 'Colton Eakins, Web Developer'},
       {property: 'og:url', content: 'https://coltoneakins.com/'},
       {property: 'og:image', content: 'https://coltoneakins.com/og-image.jpg'},
       // Twitter sharing meta tags
       // Requires @username; TODO: Create Twitter account.
       // LinkedIn sharing meta tags
-      {property: 'og:title', content: 'Colton Eakins, Front-End Developer'},
+      {property: 'og:title', content: 'Colton Eakins, Web Developer'},
       {property: 'og:image', content: 'https://www.coltoneakins.com/og-image-linkedin.jpg'},
-      {property: 'og:description', content: 'Colton Eakins is a front-end developer who uses modern web development techniques.'},
+      {property: 'og:description', content: 'Colton Eakins is a web developer who uses modern web development techniques.'},
       {property: 'og:url', content: 'https://coltoneakins.com/'},
       // Google Search Console site verification meta tag
       {name: 'google-site-verification', content: 'F5GKzEWKqHvKwwjuvH7o4UFW6Knwea0Grba-1Gks4Lg'}
@@ -77,7 +77,10 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#ff0000' },
+  loading: {
+    color: '#79bab1',
+    height: '10px'
+  },
 
   /*
   ** Global CSS
@@ -100,11 +103,11 @@ module.exports = {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     //'@nuxtjs/bulma'
     // Instead, Bulma is compiled in from main.scss above in the Global CSS section
-   'nuxt-svg',
-   '@nuxtjs/sitemap',
-   ['@nuxtjs/google-analytics', {
-     id: 'UA-131672294-1'
-   }],
+    'nuxt-svg',
+    '@nuxtjs/sitemap',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-131672294-1'
+    }],
     '~/modules/netlify-cms-json-writer',
     '~/modules/blog-feed'
   ],
@@ -123,23 +126,30 @@ module.exports = {
 	          '/blog',
 	          '/contact',
 	      ]
-   },
+  },
 
   /*
   ** Specify Dyanmic Routes to Generate
   */
 
-  //generate: {
-      //routes: [
-	      //'/blog/category/html',
-	      //'/blog/category/css',
-	      //'/blog/category/js',
-	      //'/blog/category/python',
-	      //'/blog/category/emacs',
-	      //'/blog/category/web-scraping',
-	      //'/blog/category/vue'
-      //]
-  //},
+  generate: {
+      routes: [
+	      '/portfolio/category/html',
+	      '/portfolio/category/css',
+	      '/portfolio/category/js',
+	      '/portfolio/category/python',
+	      '/portfolio/category/emacs',
+	      '/portfolio/category/web-scraping',
+	      '/portfolio/category/vue',
+	      '/blog/category/html',
+	      '/blog/category/css',
+	      '/blog/category/js',
+	      '/blog/category/python',
+	      '/blog/category/emacs',
+	      '/blog/category/web-scraping',
+	      '/blog/category/vue'
+      ]
+  },
 
 
   /*

@@ -11,6 +11,7 @@
 <script>
 export default {
     transition: 'slide-up-fade',
+    scrollToTop: false,
     head () {
         let canonicalURL = process.env.baseURL + '/portfolio/';
         return {

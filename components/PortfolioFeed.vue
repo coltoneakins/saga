@@ -20,7 +20,6 @@
     </div>
 
 
-
     <article class="portfolio-feed__projects">
       <transition-group
         name="slide-fade"
@@ -83,9 +82,9 @@ export default {
         }
     },
     watch: {
-        $route: function(to, from) {
-            this.sortFeed();
-        }
+      $route: function(to, from) {
+        this.sortFeed();
+      }
     },
     mounted: function () {
         this.$nextTick(function () {
@@ -118,6 +117,10 @@ export default {
 </script>
 
 <style>
+.portfolio-feed__project {
+    box-shadow: 10px 10px 0 #D8D8D8;
+}
+
 .portfolio-feed__tags {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -154,7 +157,7 @@ export default {
     max-width: 500px;
     display: block;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 35px;
     margin-bottom: 15px;
 }
 
@@ -162,11 +165,9 @@ export default {
 /*
   Transition for Feed: slide-fade
 */
-.portfolio-feed__project {
-    transition: all 0.5s;
-}
+
 .slide-fade-enter, .slide-fade-leave-to {
-    opacity: 0;
+  opacity: 0;
 }
 .slide-fade-enter {
     transform: translateY(-100px);
@@ -178,9 +179,6 @@ export default {
     transition: all 1s ease-in-out;
 }
 .slide-fade-leave-active {
-    transition: all 0.5s ease-in-out, opacity 0.25s ease-in-out;
-}
-.slide-fade-move {
-  transition: transform 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 </style>

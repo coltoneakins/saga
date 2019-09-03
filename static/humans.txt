@@ -1,0 +1,10 @@
+/* TEAM */
+Your title: Colton Eakins
+Site: https://www.coltoneakins.com/contact
+Location: Chicago, USA
+
+/* SITE */
+Last update: 2019/08/30
+Standards: HTML5
+Components: Nuxt,js, Vue.js, Bulma, Three,js
+Software: Nuxt.js, Spacemacs, Magit, Inkscape

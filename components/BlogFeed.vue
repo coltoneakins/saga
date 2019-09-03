@@ -44,7 +44,8 @@
     <article class="blog-feed__posts">
       <transition-group
         name="slide-fade"
-        tag="div">
+        tag="div"
+        mode="out-in">
         <div
           v-for="(post, index) in feed"
           :key="'post_' + index"
@@ -82,7 +83,8 @@
         </div>
       </transition-group>
       <transition
-        name="slide-fade">
+        name="slide-fade"
+        mode="in-out">
         <div
           v-if="feed.length === 0"
           class="blog-feed__post-notification notification is-warning has-text-centered">
@@ -147,6 +149,9 @@ export default {
 </script>
 
 <style>
+.blog-feed__post {
+    box-shadow: 0 0 30px #D8D8D8;
+}
 .blog-feed__tags {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -202,9 +207,6 @@ export default {
 /*
   Transition for Feed: slide-fade
 */
-.blog-feed__post {
-    transition: all 0.5s;
-}
 .slide-fade-enter, .slide-fade-leave-to {
     opacity: 0;
 }

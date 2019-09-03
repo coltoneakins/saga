@@ -15,7 +15,6 @@
     created: function() {
         return this.project = require('~/static/projects/' + this.$route.params.slug + '.json');
     },
-    transition: 'slide-up-fade',
-    scrollToTop: false
+    transition: 'slide-up-fade'
 }
 </script>

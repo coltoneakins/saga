@@ -4,7 +4,11 @@
       <h1 class="title">Blog</h1>
       <BlogFeed
         :filter="routeToFilter" />
-      <nuxt-child/>
+      <no-ssr>
+        <transition name="slide-up-fade">
+          <nuxt-child/>
+        </transition>
+      </no-ssr>
     </div>
   </section>
 </template>

@@ -1,8 +1,10 @@
 <template>
   <section class="contact section">
     <div class="container">
-      <h1 class="title">Let's talk.</h1>
-      <h2 class="subtitle">New projects, freelance inquries, or questions.</h2>
+      <h1 class="title">Let's chat.</h1>
+
+
+      <nuxt-child/>
 
 
       <form
@@ -67,11 +69,12 @@
 
       </form>
 
+
       <div class="notification has-text-centered">
-        All responses are emailed directly to me. Your email is not shared. You will never be sent spam. Pinky promise.
+        <p>All responses are emailed directly to me.</p>
+        <p>Your email is not shared. Your email is never sent spam. Pinky promise.</p>
       </div>
 
-      <nuxt-child/>
 
     </div>
   </section>
@@ -82,9 +85,9 @@ export default {
     scrollToTop: true,
     head () {
         return {
-            title: 'Colton Eakins // Modern Front-End Developer // Contact',
+            title: 'Colton Eakins // Modern Web Developer // Contact',
             meta: [
-                { hid: 'description', name: 'description', content: 'Contact Colton Eakins for web development.' }
+                { hid: 'description', name: 'description', content: 'Contact Colton Eakins for web development services.' }
             ]
         }
     },
