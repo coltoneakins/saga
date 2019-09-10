@@ -60,9 +60,9 @@ module.exports = {
       {rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon-180.png'}
     ],
     // Add Netlify Identity widget to site
-    script: [
-      {src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'}
-    ]
+    //script: [
+      //{src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'}
+    //]
   },
 
 
@@ -133,7 +133,8 @@ module.exports = {
   */
 
   generate: {
-      routes: [
+    routes: [
+        '/portfolio/project/scrapy-python-website-spider-with-gui',
 	      '/portfolio/category/html',
 	      '/portfolio/category/css',
 	      '/portfolio/category/js',

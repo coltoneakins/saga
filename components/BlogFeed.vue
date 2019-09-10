@@ -150,18 +150,18 @@ export default {
 
 <style>
 .blog-feed__post {
-    box-shadow: 0 0 30px #D8D8D8;
+  box-shadow: 0 0 30px #D8D8D8;
 }
 .blog-feed__tags {
-    margin-top: 15px;
-    margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .blog-feed__tags .tags > a {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .blog-feed__tags a:first-child .tag {
-    background-color: #CCCB80;
-    color: #363636;
+  background-color: #2E8194;
+  color: #FFFFFF;
 }
 .blog-feed__tags .tag {
     font-weight: bold;

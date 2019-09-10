@@ -109,7 +109,8 @@ CLOSED: [2019-01-12 Sat 23:32]
 CLOSED: [2019-09-02 Mon 19:17]
 ** DONE Correct Errors with Sitemap.xml and Submit via Google Search Console
 CLOSED: [2019-09-02 Mon 19:17]
-** TODO Add Logo v.2
+** DONE Add Logo v.2
+   CLOSED: [2019-09-09 Mon 20:42]
 ** TODO Pick Better Fonts
 ** TODO Create Better Form Handling
 ** TODO Make the blog more of a seperate entity. Give it a unique name.

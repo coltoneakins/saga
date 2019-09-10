@@ -118,19 +118,19 @@ export default {
 
 <style>
 .portfolio-feed__project {
-    box-shadow: 10px 10px 0 #D8D8D8;
+  box-shadow: 10px 10px 0 #D8D8D8;
 }
 
 .portfolio-feed__tags {
-    margin-top: 15px;
-    margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .portfolio-feed__tags .tags > a {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .portfolio-feed__tags a:first-child .tag {
-    background-color: #CCCB80;
-    color: #363636;
+  background-color: #2E8194;
+  color: #FFFFFF;
 }
 .portfolio-feed__tags .tag {
     font-weight: bold;

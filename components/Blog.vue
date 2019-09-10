@@ -2,10 +2,9 @@
   <section class="blog section">
     <div class="container">
       <h1 class="title">Blog</h1>
-      <BlogFeed
-        :filter="routeToFilter" />
+      <BlogFeed :filter="routeToFilter" />
       <no-ssr>
-        <transition name="slide-up-fade">
+        <transition>
           <nuxt-child/>
         </transition>
       </no-ssr>

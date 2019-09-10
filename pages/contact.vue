@@ -71,8 +71,8 @@
 
 
       <div class="notification has-text-centered">
-        <p>All responses are emailed directly to me.</p>
-        <p>Your email is not shared. Your email is never sent spam. Pinky promise.</p>
+        <p>This form just emails me.</p>
+        <p>Your email is not shared. Your email is never sent spam. <em>Pinky promise</em>.</p>
       </div>
 
 

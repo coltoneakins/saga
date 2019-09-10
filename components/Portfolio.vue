@@ -4,7 +4,7 @@
       <h1 class="title">Portfolio</h1>
       <PortfolioFeed :filter="routeToFilter" />
       <no-ssr>
-        <transition name="slide-up-fade">
+        <transition>
           <nuxt-child/>
         </transition>
       </no-ssr>
